@@ -3,15 +3,12 @@
 	"id": "expanded_tooltips",
 	"version": "${version}",
 	"name": "Expanded Tooltips",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "What if tooltips included descriptions hinting at the use of blocks/items, sometimes even with a bit of lore?",
 	"authors": [
-		"Me!"
+		"BasicallyIAmFox",
+		"Rolly"
 	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/expanded_tooltips/icon.png",
 	"environment": "*",
 	"entrypoints": {
