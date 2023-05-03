@@ -3,7 +3,7 @@
 	"id": "expanded_tooltips",
 	"version": "${version}",
 	"name": "Expanded Tooltips",
-	"description": "What if tooltips included descriptions hinting at the use of blocks/items, sometimes even with a bit of lore?",
+	"description": "A simple mod allowing for custom item descriptions.",
 	"authors": [
 		"BasicallyIAmFox",
 		"Rolly"
