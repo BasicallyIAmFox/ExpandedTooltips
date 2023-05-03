@@ -1,0 +1,18 @@
+{
+  "block.minecraft.clay.expanded_tooltips.desc": "A wet block of fine-grained natural soil.\nWhen smelted, it can be used in many building applications.",
+  "block.minecraft.coarse_dirt.expanded_tooltips.desc": "A block of soil uprooted from the Overworld.\nIt is rendered incapable of growing plants due to its coarser complexion.",
+  "block.minecraft.crimson_nylium.expanded_tooltips.desc": "A block of netherrack made part of a network of Nether fungus.\nUnlike its Overworld counterpart, one can use bone meal on it to spread the fungus.",
+  "block.minecraft.dirt.expanded_tooltips.desc": "A block of soil uprooted from the Overworld.\nDespite its weakness as a block, it is very versatile for many natural applications.",
+  "block.minecraft.dirt_path.expanded_tooltips.desc": "A well-worn path made in the dirt.\nIts top has the appearance of dead grass, no matter what material the path was created from.",
+  "block.minecraft.grass_block.expanded_tooltips.desc": "A block of soil which has sprung life.\nIts color depends on the temperature of the biome.",
+  "block.minecraft.gravel.expanded_tooltips.desc": "A block made up of many tiny stones.\nIt seems to abide by the laws of gravity that govern entities, with a little poking and prodding.",
+  "block.minecraft.mud.expanded_tooltips.desc": "A block of wet dirt, rich with minerals.\nIt can be found covering the ground in Mangrove Swamps, supporting their unique plant life.",
+  "block.minecraft.mycelium.expanded_tooltips.desc": "A block of dirt made part of a network of mushrooms.\nIt can support the growth of mushrooms even in the brightest of areas.",
+  "block.minecraft.podzol.expanded_tooltips.desc": "A block of dirt found in dense, wooded areas.\nIt holds many organic compounds due to the presence of dead plant matter.",
+  "block.minecraft.red_sand.expanded_tooltips.desc": "A block made up of minuscule minerals, containing trace amounts of iron.\nIt seems to abide by the laws of gravity that govern entities, with a little poking and prodding.",
+  "block.minecraft.rooted_dirt.expanded_tooltips.desc": "A block of soil, pierced by Azalea roots.\nFollowing a trail of this block downward tends to lead to a lush cave.",
+  "block.minecraft.sand.expanded_tooltips.desc": "A block made up of minuscule minerals, containing trace amounts of quartz.\nIt seems to abide by the laws of gravity that govern entities, with a little poking and prodding.",
+  "block.minecraft.soul_sand.expanded_tooltips.desc": "A common sediment in the Nether.\nThe faces which can be seen come from the many souls captured inside of it.",
+  "block.minecraft.soul_soil.expanded_tooltips.desc": "A less compact form of soul sand, common in the Soul Sand Valley.\nIt seems to have been swept up by some sort of wind, as the faces signature of soul sand are stretched out.",
+  "block.minecraft.warped_nylium.expanded_tooltips.desc": "A block of netherrack made part of a network of Nether fungus.\nUnlike its Overworld counterpart, one can use bone meal on it to spread the fungus."
+}

@@ -13,31 +13,20 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			{
-				"value": "foxhub.expandedtooltips.ExpandedTooltips",
-				"adapter": "kotlin"
-			}
+			"foxhub.expandedtooltips.ExpandedTooltips"
 		],
-		"client": [
-			{
-				"value": "foxhub.expandedtooltips.ExpandedTooltipsClient",
-				"adapter": "kotlin"
-			}
+		"fabric-datagen": [
+			"foxhub.expandedtooltips.ExpandedTooltipsDataGenerator"
 		]
 	},
 	"mixins": [
-		"expanded_tooltips.mixins.json",
-		{
-			"config": "expanded_tooltips.client.mixins.json",
-			"environment": "client"
-		}
+		"expanded_tooltips.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.19",
 		"minecraft": "~1.19.4",
 		"java": ">=17",
-		"fabric-api": "*",
-		"fabric-language-kotlin": ">=1.8.21"
+		"fabric-api": "*"
 	},
 	"suggests": {
 		"another-mod": "*"

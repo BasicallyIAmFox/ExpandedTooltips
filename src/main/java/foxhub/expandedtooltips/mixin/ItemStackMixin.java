@@ -1,7 +1,9 @@
-package foxhub.expandedtooltips.mixin.client;
+package foxhub.expandedtooltips.mixin;
 
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalRef;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.entity.player.PlayerEntity;
@@ -14,12 +16,13 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import java.util.ArrayList;
 import java.util.List;
 
+@Environment(EnvType.CLIENT)
 @Mixin(ItemStack.class)
-public abstract class ItemTooltipsMixin {
-    @Shadow public abstract String getTranslationKey();
+public abstract class ItemStackMixin {
+    @Shadow
+    public abstract String getTranslationKey();
 
     @ModifyVariable(method = "getTooltip", at = @At(value = "STORE", ordinal = 0), index = 3, print = true)
     private List saveList(List list, @Share("list") LocalRef<List<Text>> listRef) {
