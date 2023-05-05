@@ -8,9 +8,12 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.Style;
 import net.minecraft.text.Text;
+import net.minecraft.text.TextColor;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
@@ -21,10 +24,12 @@ import java.util.List;
 @Environment(EnvType.CLIENT)
 @Mixin(ItemStack.class)
 public abstract class ItemStackMixin {
+    @Unique
+    private static final Style DESCRIPTION_STYLE = Style.EMPTY.withColor(TextColor.fromRgb(14606046)).withItalic(true);
     @Shadow
     public abstract String getTranslationKey();
 
-    @ModifyVariable(method = "getTooltip", at = @At(value = "STORE", ordinal = 0), index = 3, print = true)
+    @ModifyVariable(method = "getTooltip", at = @At(value = "STORE", ordinal = 0), index = 3)
     private List saveList(List list, @Share("list") LocalRef<List<Text>> listRef) {
         listRef.set(list);
         return list;
@@ -36,7 +41,7 @@ public abstract class ItemStackMixin {
         if (I18n.hasTranslation(key)) {
             var split = I18n.translate(key).split("\\n");
             for (var text : split) {
-                listRef.get().add(Text.literal(text));
+                listRef.get().add(Text.literal(text).fillStyle(DESCRIPTION_STYLE));
             }
         }
     }
