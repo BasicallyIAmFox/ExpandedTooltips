@@ -775,7 +775,6 @@ public class ExpandedTooltipsDataGenerator implements DataGeneratorEntrypoint {
             addDecorative();
             addMineralBlocks();
             addManufactured();
-            addDecorative();
             addLighting();
         }
 
