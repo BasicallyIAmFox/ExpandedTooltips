@@ -25,7 +25,7 @@ import java.util.List;
 @Mixin(ItemStack.class)
 public abstract class ItemStackMixin {
     @Unique
-    private static final Style DESCRIPTION_STYLE = Style.EMPTY.withColor(TextColor.fromRgb(14606046)).withItalic(true);
+    private static final Style DESCRIPTION_STYLE = Style.EMPTY.withColor(TextColor.fromRgb(13750737)).withItalic(true);
     @Shadow
     public abstract String getTranslationKey();
 
