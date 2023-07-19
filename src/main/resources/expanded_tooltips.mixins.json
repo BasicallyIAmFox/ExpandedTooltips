@@ -1,13 +1,12 @@
 {
-	"required": true,
-	"package": "foxhub.expandedtooltips.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-	],
-	"client": [
-		"ItemStackMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "foxhub.expandedtooltips.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "ItemStackMixin",
+    "PotionUtilMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }
