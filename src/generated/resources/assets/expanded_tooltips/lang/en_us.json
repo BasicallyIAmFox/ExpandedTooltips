@@ -1058,7 +1058,7 @@
   "item.minecraft.skull_banner_pattern.expanded_tooltips.desc": "A stencil for painting on a banner.",
   "item.minecraft.slime_ball.expanded_tooltips.desc": "A gooey orb, dropped from all sizes of Slime.",
   "item.minecraft.slime_spawn_egg.expanded_tooltips.desc": "A strange, multi-colored egg.\nWhen used, it hatches into a mob through an unknown process.",
-  "item.minecraft.smithing_template.expanded_tooltips.desc": "A tablet used to upgrade armor to Netherite.",
+  "item.minecraft.smithing_template.expanded_tooltips.desc": "A tablet used to design or upgrade items.\nApplied with a smithing table.",
   "item.minecraft.sniffer_spawn_egg.expanded_tooltips.desc": "A strange, multi-colored egg.\nWhen used, it hatches into a mob through an unknown process.",
   "item.minecraft.snow_golem_spawn_egg.expanded_tooltips.desc": "A strange, multi-colored egg.\nWhen used, it hatches into a mob through an unknown process.",
   "item.minecraft.snowball.expanded_tooltips.desc": "A ball of snow that knocks back things it is thrown at.",
