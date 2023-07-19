@@ -7,6 +7,9 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.common.data.LanguageProvider;
 
+import java.util.Arrays;
+import java.util.List;
+
 
 public class ETLanguageProvider extends LanguageProvider {
 
@@ -73,6 +76,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.DIRT_PATH, "A well-worn path made in the dirt.", "Its top has the appearance of dead grass.");
         addTooltip(Blocks.GRASS_BLOCK, "A block of soil which has sprung life.", "Its color depends on the temperature of the biome.");
         addTooltip(Blocks.GRAVEL, "A block made up of many tiny stones.", "Abides by the laws of gravity that govern entities.");
+        //1.20 addTooltip(Blocks.SUSPICIOUS_GRAVEL, "A block of sediment with ancient artifacts inside.");
         addTooltip(Blocks.MUD, "A block of wet dirt, rich with minerals.", "Supports the unique plant life of Mangrove Swamps.");
         addTooltip(Blocks.MYCELIUM, "A block of dirt part of a network of mushrooms.", "Supports the growth of mushrooms even in bright areas.");
         var nyliumTooltip = addTooltipText("A block of netherrack part of a network of Nether fungus.", "Unlike mycelium, bone meal can be used to spread it.");
@@ -80,26 +84,33 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.WARPED_NYLIUM, nyliumTooltip);
         addTooltip(Blocks.PODZOL, "A block of dirt found in dense, wooded areas.", "Formed from quartz-rich sand and sedimentary debris.");
         addTooltip(Blocks.SAND, "A block made up of tiny minerals.", "Abides by the laws of gravity that govern entities.");
+        addTooltip(Blocks.SUSPICIOUS_SAND, "A block of sediment with ancient artifacts inside.");
         addTooltip(Blocks.RED_SAND, "A block made up of tiny minerals, containing some iron.", "Abides by the laws of gravity that govern entities.");
         addTooltip(Blocks.SOUL_SAND, "A common sediment in the Nether.", "The faces seen come from the many souls captured inside.");
         addTooltip(Blocks.SOUL_SOIL, "A less compact soul sand common in Soul Sand Valleys.", "The faces signature of soul sand appear stretched.");
     }
     private void stone() {
         addTooltip(Blocks.ANDESITE, "An igneous rock found in the Overworld.", "Its palette blends with usual stone.");
+        addTooltipForVariants(Blocks.ANDESITE, Blocks.ANDESITE_STAIRS, Blocks.ANDESITE_SLAB, Blocks.ANDESITE_WALL);
         addTooltip(Blocks.BEDROCK, "A strong rock found at the bottom of the world.", "Attempting to mine it would be a fool’s errand.");
         addTooltip(Blocks.BASALT, "A volcanic rock found in the Nether.", "It forms large pillars found throughout Basalt Deltas.");
         addTooltip(Blocks.SMOOTH_BASALT, "A volcanic rock that surrounds amethyst geodes.", "Similar to basalt formations found in the Nether.");
         addTooltip(Blocks.BLACKSTONE, "A charred-looking stone found mostly in Basalt Deltas.", "The denizens of the Nether have extracted much of it.");
+        addTooltipForVariants(Blocks.BLACKSTONE, Blocks.BLACKSTONE_STAIRS, Blocks.BLACKSTONE_SLAB, Blocks.BLACKSTONE_WALL);
         addTooltip(Blocks.GILDED_BLACKSTONE, "Blackstone with veins of gold forged into it by the Piglins.", "Seemingly only for vanity, like much of their crude society.");
         addTooltip(Blocks.CALCITE, "A carbonate rock that surrounds amethyst geodes.", "Very brittle, making it not carvable.");
         addTooltip(Blocks.COBBLESTONE, "A building material made of large rocks.", "Necessary for virtually any adventurer or builder.");
+        addTooltipForVariants(Blocks.COBBLESTONE, Blocks.COBBLESTONE_STAIRS, Blocks.COBBLESTONE_SLAB, Blocks.COBBLESTONE_WALL);
         addTooltip(Blocks.MOSSY_COBBLESTONE, "A block of cobblestone, covered in moss.", "Found in many mysterious ancient structures.");
+        addTooltipForVariants(Blocks.MOSSY_COBBLESTONE, Blocks.MOSSY_COBBLESTONE_STAIRS, Blocks.MOSSY_COBBLESTONE_SLAB, Blocks.MOSSY_COBBLESTONE_WALL);
         addTooltip(Blocks.DEEPSLATE, "A hard stone found in the deepest caverns of the Overworld.", "Rare materials can be found within it, if one is lucky.");
         addTooltip(Blocks.DIORITE, "An igneous rock found in the Overworld.", "It is an abundant resource useful for decoration.");
+        addTooltipForVariants(Blocks.DIORITE, Blocks.DIORITE_STAIRS, Blocks.DIORITE_SLAB, Blocks.DIORITE_WALL);
         addTooltip(Blocks.DRIPSTONE_BLOCK, "A strange rock, formed by time in the Dripstone Caves.", "However it is very brittle, making it not carvable.");
         addTooltip(Blocks.END_STONE, "A strange type of rock found in the End.", "Harbors twisted forms of life native to the dimension.");
-        addTooltip(Blocks.GLOWSTONE, "A glowing crystal that grows on the ceiling of the Nether.", " Holds magical properties such as strengthening of potions.");
+        addTooltip(Blocks.GLOWSTONE, "A glowing crystal that grows on the ceiling of the Nether.", "Holds magical properties such as strengthening of potions.");
         addTooltip(Blocks.GRANITE, "An igneous rock found in the Overworld.", "Can indicate the presence of a large copper vein.");
+        addTooltipForVariants(Blocks.GRANITE, Blocks.GRANITE_STAIRS, Blocks.GRANITE_SLAB, Blocks.GRANITE_WALL);
         var infestedBlocksTooltip = addTooltipText("A block of stone infested by a Silverfish.", "This sample was harvested in a way to preserve the rock.");
         addTooltip(Blocks.INFESTED_STONE, infestedBlocksTooltip);
         addTooltip(Blocks.INFESTED_COBBLESTONE, infestedBlocksTooltip);
@@ -114,8 +125,11 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.CRYING_OBSIDIAN, "A cracked block of obsidian, overflowing with energy.", "Quite unstable compared to its normal counterpart.");
         addTooltip(Blocks.POINTED_DRIPSTONE, "A sharp form of dripstone.", "Deals damage to those who touch the point.");
         addTooltip(Blocks.SANDSTONE, "A sedimentary rock commonly found below sand.", "Makes for a good path block, in lieu of dirt.");
+        addTooltipForVariants(Blocks.SANDSTONE, Blocks.SANDSTONE_STAIRS, Blocks.SANDSTONE_SLAB, Blocks.SANDSTONE_WALL);
         addTooltip(Blocks.RED_SANDSTONE, "A sedimentary rock commonly found below red sand.", "Trace amounts of iron give it a more reddish appearance.");
-        add(Blocks.STONE, "A very versatile material, making up the majority of the Overworld’s upper layers.");
+        addTooltipForVariants(Blocks.RED_SANDSTONE, Blocks.RED_SANDSTONE_STAIRS, Blocks.RED_SANDSTONE_SLAB, Blocks.RED_SANDSTONE_WALL);
+        addTooltip(Blocks.STONE, "A very versatile material, making up the majority of the Overworld’s upper layers.");
+        addTooltipForVariants(Blocks.STONE, Blocks.STONE_STAIRS, Blocks.STONE_SLAB, Blocks.STONE_PRESSURE_PLATE, Blocks.STONE_BUTTON);
         var terracottaTooltip = addTooltipText("A hardened block of clay.", "Makes beautiful multi-colored stripes in Badlands.");
         addTooltip(Blocks.TERRACOTTA, terracottaTooltip);
         addTooltip(Blocks.WHITE_TERRACOTTA, terracottaTooltip);
@@ -137,7 +151,11 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.TUFF, "An ornamental rock formed from volcanic ash.", "Can signal the presence of a large iron vein.");
     }
     private void mineral() {
-        addTooltip(Blocks.AMETHYST_CLUSTER, "A crystal found growing in amethyst geodes.", "Makes a satisfying ringing noise if mined.");
+        var growingAmethyst = addTooltipText("A crystal found growing in amethyst geodes.", "Makes a satisfying ringing noise if mined.");
+        addTooltip(Blocks.SMALL_AMETHYST_BUD, growingAmethyst);
+        addTooltip(Blocks.MEDIUM_AMETHYST_BUD, growingAmethyst);
+        addTooltip(Blocks.LARGE_AMETHYST_BUD, growingAmethyst);
+        addTooltip(Blocks.AMETHYST_CLUSTER, growingAmethyst);
         addTooltip(Blocks.ANCIENT_DEBRIS, "Remains of an unknown metal found buried deep in the Nether.", "Piglins seem to have abandoned it for the more common gold.");
         addTooltip(Blocks.BUDDING_AMETHYST, "A crystal block, which amethyst clusters grow from.", "Shatters under even the most delicate touch.");
         addTooltip(Blocks.COAL_ORE, "A block of stone, with chunks of Coal inside.", "It is most common throughout the surface of the Overworld.");
@@ -238,29 +256,32 @@ public class ETLanguageProvider extends LanguageProvider {
         var fernsTooltip = addTooltipText("A flowerless plant found all over Taiga biomes.", "Can be harvested for wheat seeds.");
         addTooltip(Blocks.FERN, fernsTooltip);
         addTooltip(Blocks.LARGE_FERN, fernsTooltip);
-        var naturalFlowersTooltip = addTooltipText("A beautiful flower, found all over the Overworld.");
-        addTooltip(Blocks.DANDELION, naturalFlowersTooltip);
-        addTooltip(Blocks.TORCHFLOWER, naturalFlowersTooltip);
-        addTooltip(Blocks.POPPY, naturalFlowersTooltip);
-        addTooltip(Blocks.BLUE_ORCHID, naturalFlowersTooltip);
-        addTooltip(Blocks.ALLIUM, naturalFlowersTooltip);
-        addTooltip(Blocks.AZURE_BLUET, naturalFlowersTooltip);
-        addTooltip(Blocks.RED_TULIP, naturalFlowersTooltip);
-        addTooltip(Blocks.ORANGE_TULIP, naturalFlowersTooltip);
-        addTooltip(Blocks.WHITE_TULIP, naturalFlowersTooltip);
-        addTooltip(Blocks.PINK_TULIP, naturalFlowersTooltip);
-        addTooltip(Blocks.OXEYE_DAISY, naturalFlowersTooltip);
-        addTooltip(Blocks.CORNFLOWER, naturalFlowersTooltip);
-        addTooltip(Blocks.LILY_OF_THE_VALLEY, naturalFlowersTooltip);
-        addTooltip(Blocks.SUNFLOWER, naturalFlowersTooltip);
-        addTooltip(Blocks.LILAC, naturalFlowersTooltip);
-        addTooltip(Blocks.ROSE_BUSH, naturalFlowersTooltip);
-        addTooltip(Blocks.PEONY, naturalFlowersTooltip);
-        addTooltip(Blocks.WITHER_ROSE, "A flower created when a soul is harvested by The Wither.", "Do not step too close, as its thorns are very painful.");
+        var smallFlowersTooltip = addTooltipText("A small flower found in the Overworld.");
+        addTooltip(Blocks.DANDELION, smallFlowersTooltip);
+        addTooltip(Blocks.POPPY, smallFlowersTooltip);
+        addTooltip(Blocks.BLUE_ORCHID, smallFlowersTooltip);
+        addTooltip(Blocks.ALLIUM, smallFlowersTooltip);
+        addTooltip(Blocks.AZURE_BLUET, smallFlowersTooltip);
+        addTooltip(Blocks.RED_TULIP, smallFlowersTooltip);
+        addTooltip(Blocks.ORANGE_TULIP, smallFlowersTooltip);
+        addTooltip(Blocks.WHITE_TULIP, smallFlowersTooltip);
+        addTooltip(Blocks.PINK_TULIP, smallFlowersTooltip);
+        addTooltip(Blocks.OXEYE_DAISY, smallFlowersTooltip);
+        addTooltip(Blocks.CORNFLOWER, smallFlowersTooltip);
+        addTooltip(Blocks.LILY_OF_THE_VALLEY, smallFlowersTooltip);
+        addTooltip(Blocks.PINK_PETALS, smallFlowersTooltip);
+        var largeFlowersTooltip = addTooltipText("A small flower found in the Overworld.");
+        addTooltip(Blocks.SUNFLOWER, largeFlowersTooltip);
+        addTooltip(Blocks.LILAC, largeFlowersTooltip);
+        addTooltip(Blocks.ROSE_BUSH, largeFlowersTooltip);
+        addTooltip(Blocks.PEONY, largeFlowersTooltip);
+        addTooltip(Blocks.TORCHFLOWER, "An ancient plant dug up by Sniffers.");
+        //1.20 addTooltip(Blocks.PITCHER_PLANT, "An ancient plant dug up by Sniffers.");
+        addTooltip(Blocks.WITHER_ROSE, "A small, dangerous flower created by the Wither.");
         var grassTooltip = addTooltipText("A small plant found wherever you look in the Overworld.", "Can be harvested for wheat seeds.");
         addTooltip(Blocks.GRASS, grassTooltip);
         addTooltip(Blocks.TALL_GRASS, grassTooltip);
-        add(Blocks.HANGING_ROOTS, "The ends of the roots of Azalea trees hanging down from blocks.");
+        addTooltip(Blocks.HANGING_ROOTS, "The ends of the roots of Azalea trees hanging down from blocks.");
         var leavesTooltip = addTooltipText("Leaves from a tree found in the Overworld.");
         addTooltip(Blocks.ACACIA_LEAVES, leavesTooltip);
         addTooltip(Blocks.AZALEA_LEAVES, leavesTooltip);
@@ -273,7 +294,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.OAK_LEAVES, leavesTooltip);
         addTooltip(Blocks.SPRUCE_LEAVES, leavesTooltip);
         addTooltip(Blocks.LILY_PAD, "Floating plants found in Overworld swamps.", "Can support the weight of many creatures.");
-        add(Blocks.MELON, "A large, juicy fruit, found in the Jungle biome.");
+        addTooltip(Blocks.MELON, "A large, juicy fruit, found in the Jungle biome.");
         var mossTooltip = addTooltipText("A plant that grows in some places in the Overworld, especially in moist environments such as the Lush Caves.");
         addTooltip(Blocks.MOSS_BLOCK, mossTooltip);
         addTooltip(Blocks.MOSS_CARPET, mossTooltip);
@@ -351,7 +372,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.DEAD_HORN_CORAL_FAN, deadCoralFansTooltip);
         addTooltip(Blocks.SEA_PICKLE, "A strange, glowing, marine creature found on the seafloor.", "Sometimes found in groups of up to four.");
         addTooltip(Blocks.SPONGE, "A porous block able to soak up water.", "Due to their rarity, this may be the true treasure that the Elder Guardians were hiding.");
-        addTooltip(Blocks.WET_SPONGE, "A sponge made useless by absorbed water.", "It can be dried out via exposure to hot environments, allowing the moisture to be collected in a bucket.");
+        addTooltip(Blocks.WET_SPONGE, "A sponge made useless by absorbed water.", "Can be dried out, allowing the moisture to be collected in a bucket.");
     }
     private void faunaProduct() {
         addTooltip(Blocks.BEE_NEST, "A hive found on the side of trees that holds up to three bees.");
@@ -370,7 +391,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.CREEPER_HEAD, mobHeadsTooltip);
         addTooltip(Blocks.ZOMBIE_HEAD, mobHeadsTooltip);
         addTooltip(Blocks.SKELETON_SKULL, mobHeadsTooltip);
-        addTooltip(Blocks.PIGLIN_HEAD, "The head of a hostile creature found in the Nether.");
+        addTooltip(Blocks.PIGLIN_HEAD, "The head of a strange creature found in the Nether.");
         addTooltip(Blocks.WITHER_SKELETON_SKULL, "The skull of a Wither Skeleton.", "It seems to show up in a structure depicted on a certain painting.");
         addTooltip(Blocks.DRAGON_HEAD, "A replica of an Ender Dragon’s head.", "Found as the figurehead on End Ships.");
         addTooltip(Blocks.PLAYER_HEAD, "The head of a creature similar to yourself.", "It is a mystery how it got here.");
@@ -454,7 +475,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.RED_GLAZED_TERRACOTTA, glazedTerracottaTooltip);
         addTooltip(Blocks.BLACK_GLAZED_TERRACOTTA, glazedTerracottaTooltip);
         addTooltip(Blocks.HONEYCOMB_BLOCK, "A solid block of four honeycombs.");
-        var woolsTooltip = addTooltipText("he block that makes up the coat of a sheep.", "Shear sheep to peacefully gather it!");
+        var woolsTooltip = addTooltipText("The block that makes up the coat of a sheep.", "Shear sheep to peacefully gather it!");
         addTooltip(Blocks.WHITE_WOOL, woolsTooltip);
         addTooltip(Blocks.ORANGE_WOOL, woolsTooltip);
         addTooltip(Blocks.MAGENTA_WOOL, woolsTooltip);
@@ -475,7 +496,11 @@ public class ETLanguageProvider extends LanguageProvider {
     private void mineralBlocks() {
         addTooltip(Blocks.AMETHYST_BLOCK, "A block of crystal found in Amethyst Geodes.");
         addTooltip(Blocks.COAL_BLOCK, "A solid block made of pieces of coal.");
-        addTooltip(Blocks.COPPER_BLOCK, "A solid block made of copper ingots.");
+        var copperTooltip = addTooltipText("A solid block made of copper ingots.", "Oxidizes when left out for too long.");
+        addTooltip(Blocks.COPPER_BLOCK, copperTooltip);
+        addTooltip(Blocks.EXPOSED_COPPER, copperTooltip);
+        addTooltip(Blocks.WEATHERED_COPPER, copperTooltip);
+        addTooltip(Blocks.OXIDIZED_COPPER, copperTooltip);
         var cutCopperTooltip = addTooltipText("A chiseled copper block.", "Oxidizes when left out for too long.");
         addTooltip(Blocks.OXIDIZED_CUT_COPPER, cutCopperTooltip);
         addTooltipForVariants(Blocks.OXIDIZED_CUT_COPPER, Blocks.OXIDIZED_CUT_COPPER_STAIRS, Blocks.OXIDIZED_CUT_COPPER_SLAB);
@@ -513,10 +538,10 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.BOOKSHELF, "A wooden shelf filled with books.", "Some villagers keep large collections of them.");
         addTooltip(Blocks.BRICKS, "Smelted clay bricks used for building.");
         addTooltipForVariants(Blocks.BRICKS, Blocks.BRICK_STAIRS, Blocks.BRICK_SLAB);
-        addTooltip(Blocks.CHISELED_DEEPSLATE, "Deepslate cut with a specific pattern.", "It is unknown what this pattern attempts to represent, though it appears to be some kind of skull.");
+        addTooltip(Blocks.CHISELED_DEEPSLATE, "Deepslate cut with a specific pattern.", "It appears to represent some kind of skull.");
         addTooltip(Blocks.COBBLED_DEEPSLATE, "A natural building material made of deepslate.");
         addTooltipForVariants(Blocks.COBBLED_DEEPSLATE, Blocks.COBBLED_DEEPSLATE_SLAB, Blocks.COBBLED_DEEPSLATE_STAIRS, Blocks.COBBLED_DEEPSLATE_WALL);
-        addTooltip(Blocks.REINFORCED_DEEPSLATE, "A block of deepslate reinforced by a strange material.", "Due to its strength, it is rendered unobtainable by normal means.", "It is found in mysterious frames at the heart of Ancient Cities.");
+        addTooltip(Blocks.REINFORCED_DEEPSLATE, "A block of deepslate reinforced by a strange material.", "Found in mysterious frames at the heart of Ancient Cities.");
         var concreteTooltip = addTooltipText("A colorful block of concrete, hardened by water.", "This process seems to have prevented the effects of gravity.");
         addTooltip(Blocks.WHITE_CONCRETE, concreteTooltip);
         addTooltip(Blocks.ORANGE_CONCRETE, concreteTooltip);
@@ -534,7 +559,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.GREEN_CONCRETE, concreteTooltip);
         addTooltip(Blocks.RED_CONCRETE, concreteTooltip);
         addTooltip(Blocks.BLACK_CONCRETE, concreteTooltip);
-        var concretePowderTooltip = addTooltipText("A powder of sand and gravel used to make concrete.", "Like its ingredients, it abides by the laws of gravity that govern entities, given enough force.");
+        var concretePowderTooltip = addTooltipText("A powder of sand and gravel used to make concrete.", "Like its ingredients, it abides by the laws of gravity.");
         addTooltip(Blocks.WHITE_CONCRETE_POWDER, concretePowderTooltip);
         addTooltip(Blocks.ORANGE_CONCRETE_POWDER, concretePowderTooltip);
         addTooltip(Blocks.MAGENTA_CONCRETE_POWDER, concretePowderTooltip);
@@ -577,16 +602,17 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.CHISELED_NETHER_BRICKS, "Nether bricks carved with a skull pattern.");
         addTooltip(Blocks.RED_NETHER_BRICKS, "Nether bricks dyed with nether wart.", "Useful for decorative purposes.");
         addTooltipForVariants(Blocks.RED_NETHER_BRICKS, Blocks.RED_NETHER_BRICK_SLAB, Blocks.RED_NETHER_BRICK_STAIRS, Blocks.RED_NETHER_BRICK_WALL);
-        addWoodsetTooltip(false, Blocks.OAK_PLANKS, Blocks.OAK_SLAB, Blocks.OAK_STAIRS, Blocks.OAK_FENCE, Blocks.OAK_FENCE_GATE, Blocks.OAK_DOOR, Blocks.OAK_TRAPDOOR, Blocks.OAK_PRESSURE_PLATE, Blocks.OAK_BUTTON);
-        addWoodsetTooltip(false, Blocks.SPRUCE_PLANKS, Blocks.SPRUCE_SLAB, Blocks.SPRUCE_STAIRS, Blocks.SPRUCE_FENCE, Blocks.SPRUCE_FENCE_GATE, Blocks.SPRUCE_DOOR, Blocks.SPRUCE_TRAPDOOR, Blocks.SPRUCE_PRESSURE_PLATE, Blocks.SPRUCE_BUTTON);
-        addWoodsetTooltip(false, Blocks.BIRCH_PLANKS, Blocks.BIRCH_SLAB, Blocks.BIRCH_STAIRS, Blocks.BIRCH_FENCE, Blocks.BIRCH_FENCE_GATE, Blocks.BIRCH_DOOR, Blocks.BIRCH_TRAPDOOR, Blocks.BIRCH_PRESSURE_PLATE, Blocks.BIRCH_BUTTON);
-        addWoodsetTooltip(false, Blocks.JUNGLE_PLANKS, Blocks.JUNGLE_SLAB, Blocks.JUNGLE_STAIRS, Blocks.JUNGLE_FENCE, Blocks.JUNGLE_FENCE_GATE, Blocks.JUNGLE_DOOR, Blocks.JUNGLE_TRAPDOOR, Blocks.JUNGLE_PRESSURE_PLATE, Blocks.JUNGLE_BUTTON);
-        addWoodsetTooltip(false, Blocks.ACACIA_PLANKS, Blocks.ACACIA_SLAB, Blocks.ACACIA_STAIRS, Blocks.ACACIA_FENCE, Blocks.ACACIA_FENCE_GATE, Blocks.ACACIA_DOOR, Blocks.ACACIA_TRAPDOOR, Blocks.ACACIA_PRESSURE_PLATE, Blocks.ACACIA_BUTTON);
-        addWoodsetTooltip(false, Blocks.DARK_OAK_PLANKS, Blocks.DARK_OAK_SLAB, Blocks.DARK_OAK_STAIRS, Blocks.DARK_OAK_FENCE, Blocks.DARK_OAK_FENCE_GATE, Blocks.DARK_OAK_DOOR, Blocks.DARK_OAK_TRAPDOOR, Blocks.DARK_OAK_PRESSURE_PLATE, Blocks.DARK_OAK_BUTTON);
-        addWoodsetTooltip(false, Blocks.MANGROVE_PLANKS, Blocks.MANGROVE_SLAB, Blocks.MANGROVE_STAIRS, Blocks.MANGROVE_FENCE, Blocks.MANGROVE_FENCE_GATE, Blocks.MANGROVE_DOOR, Blocks.MANGROVE_TRAPDOOR, Blocks.MANGROVE_PRESSURE_PLATE, Blocks.MANGROVE_BUTTON);
-        addWoodsetTooltip(false, Blocks.CHERRY_PLANKS, Blocks.CHERRY_SLAB, Blocks.CHERRY_STAIRS, Blocks.CHERRY_FENCE, Blocks.CHERRY_FENCE_GATE, Blocks.CHERRY_DOOR, Blocks.CHERRY_TRAPDOOR, Blocks.CHERRY_PRESSURE_PLATE, Blocks.CHERRY_BUTTON);
-        addWoodsetTooltip(true, Blocks.CRIMSON_PLANKS, Blocks.CRIMSON_SLAB, Blocks.CRIMSON_STAIRS, Blocks.CRIMSON_FENCE, Blocks.CRIMSON_FENCE_GATE, Blocks.CRIMSON_DOOR, Blocks.CRIMSON_TRAPDOOR, Blocks.CRIMSON_PRESSURE_PLATE, Blocks.CRIMSON_BUTTON);
-        addWoodsetTooltip(true, Blocks.WARPED_PLANKS, Blocks.WARPED_SLAB, Blocks.WARPED_STAIRS, Blocks.WARPED_FENCE, Blocks.WARPED_FENCE_GATE, Blocks.WARPED_DOOR, Blocks.WARPED_TRAPDOOR, Blocks.WARPED_PRESSURE_PLATE, Blocks.WARPED_BUTTON);
+        addWoodsetTooltip(true, Blocks.OAK_PLANKS, new String[]{}, Blocks.OAK_SLAB, Blocks.OAK_STAIRS, Blocks.OAK_FENCE, Blocks.OAK_FENCE_GATE, Blocks.OAK_DOOR, Blocks.OAK_TRAPDOOR, Blocks.OAK_PRESSURE_PLATE, Blocks.OAK_BUTTON, Blocks.OAK_SIGN, Blocks.OAK_HANGING_SIGN);
+        addWoodsetTooltip(true, Blocks.SPRUCE_PLANKS, new String[]{}, Blocks.SPRUCE_SLAB, Blocks.SPRUCE_STAIRS, Blocks.SPRUCE_FENCE, Blocks.SPRUCE_FENCE_GATE, Blocks.SPRUCE_DOOR, Blocks.SPRUCE_TRAPDOOR, Blocks.SPRUCE_PRESSURE_PLATE, Blocks.SPRUCE_BUTTON, Blocks.SPRUCE_SIGN, Blocks.SPRUCE_HANGING_SIGN);
+        addWoodsetTooltip(true, Blocks.BIRCH_PLANKS, new String[]{}, Blocks.BIRCH_SLAB, Blocks.BIRCH_STAIRS, Blocks.BIRCH_FENCE, Blocks.BIRCH_FENCE_GATE, Blocks.BIRCH_DOOR, Blocks.BIRCH_TRAPDOOR, Blocks.BIRCH_PRESSURE_PLATE, Blocks.BIRCH_BUTTON, Blocks.BIRCH_SIGN, Blocks.BIRCH_HANGING_SIGN);
+        addWoodsetTooltip(true, Blocks.JUNGLE_PLANKS, new String[]{}, Blocks.JUNGLE_SLAB, Blocks.JUNGLE_STAIRS, Blocks.JUNGLE_FENCE, Blocks.JUNGLE_FENCE_GATE, Blocks.JUNGLE_DOOR, Blocks.JUNGLE_TRAPDOOR, Blocks.JUNGLE_PRESSURE_PLATE, Blocks.JUNGLE_BUTTON, Blocks.JUNGLE_SIGN, Blocks.JUNGLE_HANGING_SIGN);
+        addWoodsetTooltip(true, Blocks.ACACIA_PLANKS, new String[]{}, Blocks.ACACIA_SLAB, Blocks.ACACIA_STAIRS, Blocks.ACACIA_FENCE, Blocks.ACACIA_FENCE_GATE, Blocks.ACACIA_DOOR, Blocks.ACACIA_TRAPDOOR, Blocks.ACACIA_PRESSURE_PLATE, Blocks.ACACIA_BUTTON, Blocks.ACACIA_SIGN, Blocks.ACACIA_HANGING_SIGN);
+        addWoodsetTooltip(true, Blocks.DARK_OAK_PLANKS, new String[]{}, Blocks.DARK_OAK_SLAB, Blocks.DARK_OAK_STAIRS, Blocks.DARK_OAK_FENCE, Blocks.DARK_OAK_FENCE_GATE, Blocks.DARK_OAK_DOOR, Blocks.DARK_OAK_TRAPDOOR, Blocks.DARK_OAK_PRESSURE_PLATE, Blocks.DARK_OAK_BUTTON, Blocks.DARK_OAK_SIGN, Blocks.DARK_OAK_HANGING_SIGN);
+        addWoodsetTooltip(true, Blocks.MANGROVE_PLANKS, new String[]{}, Blocks.MANGROVE_SLAB, Blocks.MANGROVE_STAIRS, Blocks.MANGROVE_FENCE, Blocks.MANGROVE_FENCE_GATE, Blocks.MANGROVE_DOOR, Blocks.MANGROVE_TRAPDOOR, Blocks.MANGROVE_PRESSURE_PLATE, Blocks.MANGROVE_BUTTON, Blocks.MANGROVE_SIGN, Blocks.MANGROVE_HANGING_SIGN);
+        addWoodsetTooltip(true, Blocks.CHERRY_PLANKS, new String[]{}, Blocks.CHERRY_SLAB, Blocks.CHERRY_STAIRS, Blocks.CHERRY_FENCE, Blocks.CHERRY_FENCE_GATE, Blocks.CHERRY_DOOR, Blocks.CHERRY_TRAPDOOR, Blocks.CHERRY_PRESSURE_PLATE, Blocks.CHERRY_BUTTON, Blocks.CHERRY_SIGN, Blocks.CHERRY_HANGING_SIGN);
+        addWoodsetTooltip(true, Blocks.BAMBOO_PLANKS, new String[]{"Planks crafted from an bamboo stalks.", "Very versatile in crafting."}, Blocks.BAMBOO_SLAB, Blocks.BAMBOO_STAIRS, Blocks.BAMBOO_FENCE, Blocks.BAMBOO_FENCE_GATE, Blocks.BAMBOO_DOOR, Blocks.BAMBOO_TRAPDOOR, Blocks.BAMBOO_PRESSURE_PLATE, Blocks.BAMBOO_BUTTON, Blocks.BAMBOO_SIGN, Blocks.BAMBOO_HANGING_SIGN);
+        addWoodsetTooltip(false, Blocks.CRIMSON_PLANKS, new String[]{}, Blocks.CRIMSON_SLAB, Blocks.CRIMSON_STAIRS, Blocks.CRIMSON_FENCE, Blocks.CRIMSON_FENCE_GATE, Blocks.CRIMSON_DOOR, Blocks.CRIMSON_TRAPDOOR, Blocks.CRIMSON_PRESSURE_PLATE, Blocks.CRIMSON_BUTTON, Blocks.CRIMSON_SIGN, Blocks.CRIMSON_HANGING_SIGN);
+        addWoodsetTooltip(false, Blocks.WARPED_PLANKS, new String[]{}, Blocks.WARPED_SLAB, Blocks.WARPED_STAIRS, Blocks.WARPED_FENCE, Blocks.WARPED_FENCE_GATE, Blocks.WARPED_DOOR, Blocks.WARPED_TRAPDOOR, Blocks.WARPED_PRESSURE_PLATE, Blocks.WARPED_BUTTON, Blocks.WARPED_SIGN, Blocks.WARPED_HANGING_SIGN);
         addTooltip(Blocks.PACKED_MUD, "Dried mud packed together with wheat.");
         addTooltip(Blocks.POLISHED_ANDESITE, "Compacted, smooth andesite.", "Useful for decorative purposes.");
         addTooltipForVariants(Blocks.POLISHED_ANDESITE, Blocks.POLISHED_ANDESITE_SLAB, Blocks.POLISHED_ANDESITE_STAIRS);
@@ -619,7 +645,10 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.CRACKED_STONE_BRICKS, "Stone bricks cracked from age.", "Useful for decorative purposes.");
         addTooltip(Blocks.CHISELED_STONE_BRICKS, "Stone bricks cut with a specific pattern.");
         addTooltip(Blocks.MOSSY_STONE_BRICKS, "Stone bricks covered in moss.", "Useful for decorative purposes.");
-
+        addTooltipForVariants(Blocks.MOSSY_STONE_BRICKS, Blocks.MOSSY_STONE_BRICK_STAIRS, Blocks.MOSSY_STONE_BRICK_SLAB, Blocks.MOSSY_STONE_BRICK_WALL);
+        addTooltip(Blocks.BAMBOO_MOSAIC, "A decorative, patterned block of bamboo.");
+        addTooltipForVariants(Blocks.BAMBOO_MOSAIC, Blocks.BAMBOO_MOSAIC_STAIRS, Blocks.BAMBOO_MOSAIC_SLAB);
+        addTooltip(Blocks.BAMBOO_BLOCK, "A bundle of bamboo stalks.", "Used extensively in crafting.");
 
 
     }
@@ -660,7 +689,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.CHEST, "A wooden container commonly used to hold many items.", "Comes in two sizes.");
         addTooltip(Blocks.ENDER_CHEST, "An otherworldly container that can hold twenty-seven items that can be accessed from any Ender Chest.");
         addTooltip(Blocks.CRAFTING_TABLE, "A simple workbench made from wooden planks.", "A fundamental block with hundreds of possibilities.");
-        addTooltip(Blocks.ENCHANTING_TABLE, "A magical workbench used for enchanting.", "Surrounding it with additional books seems to increase its power and draw strange runes to its tome.");
+        addTooltip(Blocks.ENCHANTING_TABLE, "A magical workbench used for enchanting.", "Surrounding it with books increases its power and draws strange runes to its tome.");
         addTooltip(Blocks.FLETCHING_TABLE, "A workstation used by fletcher Villagers.");
         addTooltip(Blocks.FURNACE, "A block used to smelt items in ten seconds.");
         addTooltip(Blocks.GRINDSTONE, "A block used to remove enchantments from items.", "A workstation for weaponsmith Villagers.");
@@ -687,6 +716,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.SMITHING_TABLE, "A workbench used to upgrade tools and armor.", "Used as a workstation by toolsmith Villagers.");
         addTooltip(Blocks.SMOKER, "A block used to cook food faster and as a workstation by butcher Villagers.");
         addTooltip(Blocks.STONECUTTER, "A block used to cut and chisel many types of stone.", "Mason Villagers use it as a workstation.");
+        addTooltip(Blocks.CHISELED_BOOKSHELF, "A wooden shelf filled with books.", "Can be used as storage for many varieties of books.");
     }
     private void utilizable() {
         var bannerTooltip = addTooltipText("A colorful flag that can be hung from walls or placed on the ground.", "They can be patterned with millions of unique combinations.");
@@ -744,6 +774,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.SCAFFOLDING, "A very useful  block made of bamboo used to get around while building.");
         addTooltip(Blocks.SPAWNER, "A mysterious block that summons copies of any creature whose soul has become trapped inside.");
         addTooltip(Blocks.TNT, "An explosive block made of sand and gunpowder.", "Be careful around anything you don’t want turned into a crater!");
+        addTooltip(Blocks.DECORATED_POT, "A ceramic pot that can display ancient sherds.");
     }
     private void mechanical() {
         var commandBlocks = addTooltipText("A mysterious block that has not been found to have any use.");
@@ -756,7 +787,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.HOPPER, "A redstone component used to move items around and transfer them between containers.");
         addTooltip(Blocks.LEVER, "A simple switch to turn on or off a redstone signal.");
         addTooltip(Blocks.LIGHTNING_ROD, "A copper pole that attracts lightning.", "Be careful not to get too close during a thunderstorm!");
-        addTooltip(Blocks.NOTE_BLOCK, "A redstone component that plays music notes.", " Can be made to sound like various instruments by placing different blocks underneath.");
+        addTooltip(Blocks.NOTE_BLOCK, "A redstone component that plays music notes.", "Can be made to sound like various instruments by placing different blocks underneath.");
         addTooltip(Blocks.OBSERVER, "A redstone component that can detect changes in blocks next to it.");
         addTooltip(Blocks.PISTON, "A redstone component that pushes and pulls blocks.");
         addTooltip(Blocks.STICKY_PISTON, "A piston with slime on the end to hold onto blocks without the help of slime or honey.");
@@ -778,9 +809,11 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.STRUCTURE_BLOCK, "A mysterious block that has not been found to have any use.");
         addTooltip(Blocks.SCULK, "A block made from a material of unknown origin.", "Mining it seems to release the strange energy held within.");
         addTooltip(Blocks.SCULK_CATALYST, "A block made from a material of unknown origin.", "It can create more of this material when given sufficient soul power.");
-        addTooltip(Blocks.SCULK_SENSOR, "A block made from a material of unknown origin.", "It has small tendrils that can sense vibrations, and are sensitive enough that a Redstone device could discern a noise’s source.");
+        addTooltip(Blocks.SCULK_SENSOR, "A block made from a material of unknown origin.", "Has small tendrils that can sense vibrations and put out a signal redstone can detect.");
         addTooltip(Blocks.SCULK_SHRIEKER, "A block made from a material of unknown origin.", "Its loud shrieks generate pulsating darkness.");
         addTooltip(Blocks.SCULK_VEIN, "A block made from a material of unknown origin.", "It seems to be an early stage of growth for other sculk blocks.");
+        //1.20 addTooltip(Blocks.CALIBRATED_SCULK_SENSOR, "A block made from a material of unknown origin.", "Infused with amethyst, allowing it to filter vibrations.");
+        //1.20 addTooltip(Blocks.SNIFFER_EGG, "The egg of an ancient creature, found in an ocean ruin.");
     }
     private void materials() {
         addTooltip(Items.AMETHYST_SHARD, "A shard of a purple crystal found in Amethyst Geodes.");
@@ -902,7 +935,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.COOKED_RABBIT, "A filling piece of cooked rabbit.");
         addTooltip(Items.SALMON, "Uncooked fish found in oceans and rivers.");
         addTooltip(Items.COOKED_SALMON, "A filling piece of cooked salmon.");
-        addTooltip(Items.ROTTEN_FLESH, "Decomposing flesh dropped by zombies.", "Do not eat!");
+        addTooltip(Items.ROTTEN_FLESH, "Decomposing flesh dropped by zombies.", "Eating it is not recommended.");
         addTooltip(Items.SPIDER_EYE, "A common ingredient for potions, sometimes dropped by spiders.");
         addTooltip(Items.SUSPICIOUS_STEW, "A soup that inflicts different effects depending on the ingredients.");
         addTooltip(Items.SWEET_BERRIES, "A sweet food found in Taiga biomes.");
@@ -912,7 +945,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.BEETROOT_SEEDS, "Seeds used to grow beetroot plants.");
         addTooltip(Items.COCOA_BEANS, "A large bean found on jungle trees.");
         addTooltip(Items.MELON_SEEDS, "Seeds used to grow melons.");
-        //addTooltip(Items.PITCHER_POD, "A pod used to grow ancient pitcher plants.");
+        //1.20 addTooltip(Items.PITCHER_POD, "A pod used to grow ancient pitcher plants.");
         addTooltip(Items.PUMPKIN_SEEDS, "Seeds used to grow pumpkins.");
         addTooltip(Items.TORCHFLOWER_SEEDS, "Seeds used to grow ancient torchflowers.");
         addTooltip(Items.WHEAT_SEEDS, "Seeds used to grow wheat plants.");
@@ -961,11 +994,11 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.LINGERING_POTION, "A brewed drink that creates an effect-granting cloud of gas.");
         addTooltip(Items.SPLASH_POTION, "A brewed drink that grants effects to creatures splashed by it.");
         addTooltip(Items.SHEARS, "A tool used to cut grasses and leaves, and to shear sheep.");
-        addTooltip(Items.WOODEN_SHOVEL, "A shovel made of wood or hypha. Used to dig some natural materials.");
-        addTooltip(Items.STONE_SHOVEL, "A shovel made of certain stones. Used to dig some natural materials.");
-        addTooltip(Items.IRON_SHOVEL, "A shovel made of smelted iron. Used to dig some natural materials.");
-        addTooltip(Items.GOLDEN_SHOVEL, "A shovel made of smelted gold. Used to dig some natural materials.");
-        addTooltip(Items.DIAMOND_SHOVEL, "A shovel made of the Overworld’s strongest mineral. Used to dig some natural materials.");
+        addTooltip(Items.WOODEN_SHOVEL, "A shovel made of wood or hypha. Used to dig through some natural materials.");
+        addTooltip(Items.STONE_SHOVEL, "A shovel made of certain stones. Used to dig through some natural materials.");
+        addTooltip(Items.IRON_SHOVEL, "A shovel made of smelted iron. Used to dig through some natural materials.");
+        addTooltip(Items.GOLDEN_SHOVEL, "A shovel made of smelted gold. Used to dig through some natural materials.");
+        addTooltip(Items.DIAMOND_SHOVEL, "A shovel made of the Overworld’s strongest mineral. Used to dig through some natural materials.");
         addTooltip(Items.NETHERITE_SHOVEL, "A diamond shovel enhanced with Netherite.", "This makes it impervious to fire.");
         addTooltip(Items.SHIELD, "A piece of personal armor used to block attacks.");
     }
@@ -977,26 +1010,26 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.COMPASS, "A device used to locate one’s spawn point using a strange form of magnetism.");
         addTooltip(Items.RECOVERY_COMPASS, "A strange compass enhanced by the power of Echo Shards.", "It points to the exact point at which the bearer last died.");
         addTooltip(Items.MAP, "A piece of paper used to see an overview of an area.");
-        addTooltip(Items.FILLED_MAP, "A map filled with a visual description of an area");
+        addTooltip(Items.FILLED_MAP, "A map filled with a visual description of an area.");
         addTooltip(Items.NAME_TAG, "A label used to name creatures.");
-        addTooltip(Items.SPYGLASS, "A viewing device made of Copper and Amethyst.", "Allows the user to see far objects as if they were close.");
+        addTooltip(Items.SPYGLASS, "A viewing device made of copper and amethyst.", "Allows the user to see far objects as if they were close by.");
     }
     private void weapons() {
         addTooltip(Items.ARROW, "A pointed stick fired from a bow or crossbow.");
         addTooltip(Items.BRUSH, "A tool used to excavate ancient artifacts.");
         addTooltip(Items.SPECTRAL_ARROW, "A magical arrow that inflicts the glowing effect on anything it hits.");
-        addTooltip(Items.TIPPED_ARROW, "An arrow dipped in a potion, granting the effect to anyone it hits.");
+        addTooltip(Items.TIPPED_ARROW, "An arrow dipped in a potion, granting an effect to anyone it hits.");
         addTooltip(Items.BOW, "A weapon used to fire many types of arrows.");
         addTooltip(Items.CROSSBOW, "A stronger bow that must be charged before using.");
         addTooltip(Items.EGG, "A chicken’s egg.", "Will sometimes hatch when thrown.");
         addTooltip(Items.FIRE_CHARGE, "A ball of fire-starting materials used to light fires.");
         addTooltip(Items.SNOWBALL, "A ball of snow that knocks back things it is thrown at.");
-        addTooltip(Items.WOODEN_SWORD, "A sword made of wood or hypha. A common weapon.");
-        addTooltip(Items.STONE_SWORD, "A sword made of certain stones.  A common weapon.");
-        addTooltip(Items.IRON_SWORD, "A sword made of smelted iron.  A common weapon.");
-        addTooltip(Items.GOLDEN_SWORD, "A sword made of smelted gold. A common weapon.");
+        addTooltip(Items.WOODEN_SWORD, "A sword made of wood or hypha. Used as a simple weapon.");
+        addTooltip(Items.STONE_SWORD, "A sword made of certain stones.  A weak, yet common weapon.");
+        addTooltip(Items.IRON_SWORD, "A sword made of smelted iron.  A reliable weapon for many adventurers.");
+        addTooltip(Items.GOLDEN_SWORD, "A sword made of smelted gold. A flashy weapon with little durability.");
         addTooltip(Items.DIAMOND_SWORD, "A sword made of the Overworld’s strongest mineral. A powerful weapon.");
-        addTooltip(Items.NETHERITE_SWORD, "A diamond sword enhanced with Netherite.", "This makes it impervious to fire.");
+        addTooltip(Items.NETHERITE_SWORD, "A diamond sword enhanced with Netherite.", "An impressive weapon.");
         addTooltip(Items.TRIDENT, "A three-pronged spear that easily travels through water.");
     }
     private void armor() {
@@ -1049,6 +1082,8 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.JUNGLE_CHEST_BOAT, chestBoatTooltip);
         addTooltip(Items.CHERRY_CHEST_BOAT, chestBoatTooltip);
         addTooltip(Items.MANGROVE_CHEST_BOAT, chestBoatTooltip);
+        addTooltip(Items.BAMBOO_RAFT, "A bamboo means of aquatic transportation.");
+        addTooltip(Items.BAMBOO_CHEST_RAFT, "A raft containing a chest to store materials.");
         addTooltip(Items.ELYTRA, "A pair of wings found on End Ships.", "The sky’s the limit!");
         addTooltip(Items.MINECART, "An iron cart, used as a means of transportation.");
         addTooltip(Items.CHEST_MINECART, "A minecart with a chest to store cargo.");
@@ -1090,7 +1125,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.GLASS_BOTTLE, "A small glass bottle, able to hold many liquids.");
         addTooltip(Items.GOAT_HORN, "A goat’s horn that has fallen off.", "When blown, the sound can be heard for hundreds of meters.");
         addTooltip(Items.LEAD, "A leash used to keep creatures close.", "Can be tied to a fence post.");
-        var smithingTemplate = addTooltipText("A tablet used to design or upgrade items.", "Applied with a smithing table.");
+        var smithingTemplate = addTooltipText("A tablet used to design or upgrade items.", "Applied with a Smithing Table.");
         addTooltip(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, smithingTemplate);
         /*addTooltip(Items.COAST_ARMOR_TRIM_SMITHING_TEMPLATE, trimTemplate);
         //addTooltip(Items.DUNE_ARMOR_TRIM_SMITHING_TEMPLATE, trimTemplate);
@@ -1108,8 +1143,8 @@ public class ETLanguageProvider extends LanguageProvider {
         //addTooltip(Items.WARD_ARMOR_TRIM_SMITHING_TEMPLATE, trimTemplate);
         //addTooltip(Items.WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE, trimTemplate);
         addTooltip(Items.WILD_ARMOR_TRIM_SMITHING_TEMPLATE, trimTemplate);*/
-        addTooltip(Items.SADDLE, "A useful seat for easier riding of certain animals.");
-        addTooltip(Items.TOTEM_OF_UNDYING, "A strange statue created by illagers", "Mysteriously revives you when moments from death.");
+        addTooltip(Items.SADDLE, "A useful seat for controlled riding of certain animals.");
+        addTooltip(Items.TOTEM_OF_UNDYING, "A strange figure created by illagers", "Mysteriously revives you when moments from death.");
     }
     private void otherItems() {
         var discTooltip = addTooltipText("A disc made from an unknown material.", "It has etchings that allow music to be played.");
@@ -1219,58 +1254,66 @@ public class ETLanguageProvider extends LanguageProvider {
     private void addTooltipForVariants(Block baseBlock, Block... variants) {
         for (Block variant : variants) {
             if (variant instanceof StairBlock) {
-                addTooltip(variant, "Stair variant of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "Stairs crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
             if (variant instanceof SlabBlock) {
-                addTooltip(variant, "Slab variant of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "A slab crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
             if (variant instanceof WallBlock) {
-                addTooltip(variant, "Wall variant of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "A wall crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
             if (variant instanceof ButtonBlock) {
-                addTooltip(variant, "Button made of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "A button crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
             if (variant instanceof PressurePlateBlock) {
-                addTooltip(variant, "Pressure Plate made of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "A pressure plate crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
             if (variant instanceof FenceBlock) {
-                addTooltip(variant, "Fence variant of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "A fence crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
         }
     }
 
-    private void addWoodsetTooltip(boolean isNetherWood, Block baseBlock, Block... variants) {
-        var planksTooltip = !isNetherWood ? "Planks crafted from an Overworld log." : "Planks crafted from a Nether stem.";
-        addTooltip(baseBlock, planksTooltip, "Very versatile in crafting.");
-
+    private void addWoodsetTooltip(boolean isOvWood, Block baseBlock, String[] optionalBaseBlockTooltip, Block... variants) {
+        if (Arrays.stream(optionalBaseBlockTooltip).toList().isEmpty()) {
+            var planksTooltip = isOvWood ? "Planks crafted from an Overworld log." : "Planks crafted from a Nether stem.";
+            addTooltip(baseBlock, planksTooltip, "Very versatile in crafting.");
+        } else {
+            addTooltip(baseBlock, optionalBaseBlockTooltip);
+        }
         for (Block variant : variants) {
             if (variant instanceof StairBlock) {
-                addTooltip(variant, "Stair variant of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "Stairs crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
             if (variant instanceof SlabBlock) {
-                addTooltip(variant, "Slab variant of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "A slab crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
             if (variant instanceof FenceBlock) {
-                addTooltip(variant, "Fence variant of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "A fence crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
             if (variant instanceof FenceGateBlock) {
-                addTooltip(variant, "Fence Gate variant of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "A fence gate crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
             if (variant instanceof ButtonBlock) {
-                addTooltip(variant, "Button made of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "A button crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
             if (variant instanceof PressurePlateBlock) {
-                addTooltip(variant, "Pressure Plate made of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "A pressure plate crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
             if (variant instanceof DoorBlock) {
-                addTooltip(variant, "Door made of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "A door crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
             if (variant instanceof TrapDoorBlock) {
-                addTooltip(variant, "Trapdoor made of " + I18n.get(baseBlock.getDescriptionId()));
+                addTooltip(variant, "A trapdoor crafted from " + I18n.get(baseBlock.getDescriptionId()));
+            }
+            if (variant instanceof StandingSignBlock) {
+                addTooltip(variant, "A sign crafted from " + I18n.get(baseBlock.getDescriptionId()));
+            }
+            if (variant instanceof CeilingHangingSignBlock) {
+                addTooltip(variant, "A hanging sign crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
         }
     }
-
 
     private void addTooltip(Item item, String... tooltip) {
         add(item.getDescriptionId() + ".expanded_tooltips.desc", String.join("\n", tooltip));

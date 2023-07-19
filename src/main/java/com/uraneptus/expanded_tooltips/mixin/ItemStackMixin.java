@@ -2,6 +2,7 @@ package com.uraneptus.expanded_tooltips.mixin;
 
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalRef;
+import com.uraneptus.expanded_tooltips.ExpandedTooltips;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
@@ -23,12 +24,7 @@ import java.util.List;
 
 @OnlyIn(Dist.CLIENT)
 @Mixin(ItemStack.class)
-public abstract class ItemStackMixin {
-    @Unique
-    private static final Style DESCRIPTION_STYLE = Style.EMPTY.withColor(TextColor.fromRgb(13750737)).withItalic(true);
-
-    @Shadow
-    public abstract String getDescriptionId();
+public class ItemStackMixin {
 
     @ModifyVariable(method = "getTooltipLines(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/TooltipFlag;)Ljava/util/List;", at = @At(value = "STORE", ordinal = 0), index = 3)
     private List saveList(List list, @Share("list") LocalRef<List<Component>> listRef) {
@@ -38,12 +34,6 @@ public abstract class ItemStackMixin {
 
     @Inject(method = "getTooltipLines(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/TooltipFlag;)Ljava/util/List;", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getHideFlags()I"))
     private void getTooltip(Player player, TooltipFlag context, CallbackInfoReturnable<List<Component>> cir, @Share("list") LocalRef<List<Component>> listRef) {
-        var key = getDescriptionId() + ".expanded_tooltips.desc";
-        if (I18n.exists(key)) {
-            var split = I18n.get(key).split("\\n");
-            for (var text : split) {
-                listRef.get().add(Component.literal(text).withStyle(DESCRIPTION_STYLE));
-            }
-        }
+        ExpandedTooltips.addText((ItemStack)(Object)this, listRef.get());
     }
 }
