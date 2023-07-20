@@ -162,12 +162,20 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.COPPER_ORE, "A block of stone, with chunks of Copper inside.", "Common in higher-level caves, especially Dripstone Caves.");
         addTooltip(Blocks.DIAMOND_ORE, "A block of stone, with chunks of Diamond inside.", "Common in Deepslate, so finding this variant is a rarity.");
         addTooltip(Blocks.EMERALD_ORE, "A block of stone, with chunks of Emerald inside.", " Common in high mountains, so this variant is a rarity.");
-        addTooltip(Blocks.GOLD_ORE, "A block of stone, with chunks of Gold inside.", "Common in Badlands but otherwise tends to be found low down.");
-        addTooltip(Blocks.NETHER_GOLD_ORE, "A block of netherrack, with small chunks of Gold inside.", "It can be found all throughout the Nether.");
         addTooltip(Blocks.IRON_ORE, "A block of stone, with chunks of Iron inside.", "Most common high up, but large veins can be in lower caves.");
         addTooltip(Blocks.LAPIS_ORE, "A block of stone, with chunks of Lapis Lazuli inside.", "It is rare, spread throughout every layer of the Overworld.");
-        addTooltip(Blocks.NETHER_QUARTZ_ORE, "A block of netherrack, with chunks of Quartz inside.", "It can be found all throughout the Nether.");
         addTooltip(Blocks.REDSTONE_ORE, "A block of stone, with crystals of Redstone inside.", "It gets more common as depth increases.");
+        addTooltip(Blocks.GOLD_ORE, "A block of stone, with chunks of Gold inside.", "Common in Badlands but otherwise tends to be found low down.");
+        addTooltip(Blocks.DEEPSLATE_COAL_ORE, "A block of deepslate embedded with coal.", "It is common throughout the surface of the Overworld.");
+        addTooltip(Blocks.DEEPSLATE_COPPER_ORE, "A block of deepslate embedded with copper.", "Common in Dripstone Caves and large veins.");
+        addTooltip(Blocks.DEEPSLATE_IRON_ORE, "A block of deepslate embedded with iron.", "Great amounts can be found in large veins.");
+        addTooltip(Blocks.DEEPSLATE_GOLD_ORE, "A block of deepslate embedded with gold.", "Tends to be found lower down.");
+        addTooltip(Blocks.DEEPSLATE_DIAMOND_ORE, "A block of deepslate embedded with diamond.", "More common as you descend.");
+        addTooltip(Blocks.DEEPSLATE_REDSTONE_ORE, "A block of deepslate embedded with redstone", "More common as you descend.");
+        addTooltip(Blocks.DEEPSLATE_LAPIS_ORE, "A block of deepslate embedded with lapis lazuli", "Rare, but spread throughout many layers of the Overworld.");
+        addTooltip(Blocks.DEEPSLATE_EMERALD_ORE, "A block of deepslate embedded with emerald", "Common in high mountains, so this variant is a rarity.");
+        addTooltip(Blocks.NETHER_GOLD_ORE, "A block of netherrack, with small chunks of Gold inside.", "It can be found all throughout the Nether.");
+        addTooltip(Blocks.NETHER_QUARTZ_ORE, "A block of netherrack, with chunks of Quartz inside.", "It can be found all throughout the Nether.");
     }
     private void liquid() {
         addTooltip(Blocks.ICE, "Water’s solid state.", "In some biomes water will freeze into it within minutes.");
@@ -199,7 +207,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.DARK_OAK_LOG, overworldLogsTooltip);
         addTooltip(Blocks.SPRUCE_LOG, overworldLogsTooltip);
         addTooltip(Blocks.MANGROVE_LOG, overworldLogsTooltip);
-        var strippedOverworldLogsTooltip = addTooltipText("Overworld log removed of its bark using an axe.");
+        var strippedOverworldLogsTooltip = addTooltipText("An Overworld log removed of its bark using an axe.");
         addTooltip(Blocks.STRIPPED_ACACIA_LOG, strippedOverworldLogsTooltip);
         addTooltip(Blocks.STRIPPED_BIRCH_LOG, strippedOverworldLogsTooltip);
         addTooltip(Blocks.STRIPPED_CHERRY_LOG, strippedOverworldLogsTooltip);
@@ -208,6 +216,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.STRIPPED_DARK_OAK_LOG, strippedOverworldLogsTooltip);
         addTooltip(Blocks.STRIPPED_SPRUCE_LOG, strippedOverworldLogsTooltip);
         addTooltip(Blocks.STRIPPED_MANGROVE_LOG, strippedOverworldLogsTooltip);
+        addTooltip(Blocks.STRIPPED_BAMBOO_BLOCK, "A Bamboo Block removed of its bark using an axe.");
         var overworldWoodTooltip = addTooltipText("An Overworld log with all sides covered in bark.");
         addTooltip(Blocks.ACACIA_WOOD, overworldWoodTooltip);
         addTooltip(Blocks.BIRCH_WOOD, overworldWoodTooltip);
@@ -308,6 +317,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.DARK_OAK_SAPLING, saplingsTooltip);
         addTooltip(Blocks.JUNGLE_SAPLING, saplingsTooltip);
         addTooltip(Blocks.OAK_SAPLING, saplingsTooltip);
+        addTooltip(Blocks.MANGROVE_PROPAGULE, saplingsTooltip);
         var seagrassesTooltip = addTooltipText("A small plant found under the Overworld’s oceans and rivers.");
         addTooltip(Blocks.SEAGRASS, seagrassesTooltip);
         addTooltip(Blocks.TALL_SEAGRASS, seagrassesTooltip);
@@ -321,14 +331,20 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.CRIMSON_FUNGUS, netherFungiTooltip);
         addTooltip(Blocks.WARPED_FUNGUS, netherFungiTooltip);
         addTooltip(Blocks.GLOW_LICHEN, "A glowing fungus that is found in the Overworld‘s caves.");
-        var mushroomTooltip = addTooltipText("The cap of a huge mushroom, found in some Overworld biomes.");
+        var mushroomTooltip = addTooltipText("A small mushroom found across dimensions.");
+        var mushroomBlockTooltip = addTooltipText("The cap of a huge mushroom, found in some Overworld biomes.");
         addTooltip(Blocks.BROWN_MUSHROOM, mushroomTooltip);
         addTooltip(Blocks.RED_MUSHROOM, mushroomTooltip);
+        addTooltip(Blocks.BROWN_MUSHROOM_BLOCK, mushroomBlockTooltip);
+        addTooltip(Blocks.RED_MUSHROOM_BLOCK, mushroomBlockTooltip);
         addTooltip(Blocks.MUSHROOM_STEM, "The stem of a huge mushroom from the Overworld.");
         addTooltip(Blocks.NETHER_SPROUTS, "Small fungus found in the Warped Forest biome.");
-        addTooltip(Blocks.NETHER_WART, "A fungus sprout found in the Nether, seemingly extinct outside of small gardens in Nether Fortresses.");
-        addTooltip(Blocks.NETHER_WART_BLOCK, "A compact block of Nether Wart, found in the caps of crimson huge fungi.");
-        addTooltip(Blocks.CRIMSON_ROOTS, "Small roots found in Nether forests, hinting at a larger mycelium network.");
+        addTooltip(Blocks.NETHER_WART, "A fungus sprout found in the Nether.", "Seemingly extinct outside of small gardens in Nether Fortresses.");
+        addTooltip(Blocks.NETHER_WART_BLOCK, "A compact block of Nether Wart.", "Found in the caps of crimson huge fungi.");
+        addTooltip(Blocks.WARPED_WART_BLOCK, "A block of warped Nether Wart.", "Found in the caps of warped huge fungi.");
+        var netherRootsTooltip = addTooltipText("Small roots found in Nether forests.", "Hint at a larger mycelium network.");
+        addTooltip(Blocks.CRIMSON_ROOTS, netherRootsTooltip);
+        addTooltip(Blocks.WARPED_ROOTS, netherRootsTooltip);
         addTooltip(Blocks.SHROOMLIGHT, "A glowing mushroom found on the caps of huge fungi in the Nether.");
         addTooltip(Blocks.TWISTING_VINES, "Tall stalks found growing upwards, commonly in the Nether’s Warped Forests.");
         addTooltip(Blocks.WEEPING_VINES, "Ving growing down from the ceiling, Commonly found in the Nether’s Crimson Forest.");
@@ -420,6 +436,10 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.BLACK_CARPET, carpetsTooltip);
         addTooltip(Blocks.CHAIN, "Links of iron, usually used to hang things.");
         addTooltip(Blocks.IRON_BARS, "Metal bars, usually used to create windows or fences.");
+        addTooltip(Blocks.IRON_DOOR, "A door crafted from iron.", "Can only be opened with redstone power.");
+        addTooltip(Blocks.IRON_TRAPDOOR, "A trapdoor crafted from iron.", "Can only be opened with redstone power.");
+        addTooltip(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE, "A pressure plate crafted from iron.", "Measures large groups of objects.");
+        addTooltip(Blocks.LIGHT_WEIGHTED_PRESSURE_PLATE, "A pressure plate crafted from gold.", "Measures the number of objects on it.");
         addTooltip(Blocks.GLASS, "A transparent block smelted from sand.", "It appears many creatures cannot see through it.");
         addTooltip(Blocks.GLASS_PANE, "A thin layer of glass, usually used for windows.");
         var stainedGlassTooltip = addTooltipText("A dyed block of glass, coming in many colorful variants.");
@@ -496,27 +516,38 @@ public class ETLanguageProvider extends LanguageProvider {
     private void mineralBlocks() {
         addTooltip(Blocks.AMETHYST_BLOCK, "A block of crystal found in Amethyst Geodes.");
         addTooltip(Blocks.COAL_BLOCK, "A solid block made of pieces of coal.");
-        var copperTooltip = addTooltipText("A solid block made of copper ingots.", "Oxidizes when left out for too long.");
-        addTooltip(Blocks.COPPER_BLOCK, copperTooltip);
-        addTooltip(Blocks.EXPOSED_COPPER, copperTooltip);
-        addTooltip(Blocks.WEATHERED_COPPER, copperTooltip);
-        addTooltip(Blocks.OXIDIZED_COPPER, copperTooltip);
-        var cutCopperTooltip = addTooltipText("A chiseled copper block.", "Oxidizes when left out for too long.");
-        addTooltip(Blocks.OXIDIZED_CUT_COPPER, cutCopperTooltip);
+        var copperTooltip = "A solid block made of copper ingots.";
+        var cutCopperTooltip = "A chiseled copper block.";
+        var unoxidizedTooltip = "Oxidizes when left out for too long.";
+        var exposedTooltip = "It is beginning to oxidize.";
+        var weatheredTooltip = "Appears weathered by oxidization.";
+        var oxidizedTooltip = "It is a blue-green color due to oxidization.";
+        var waxedTooltip = "Waxed to prevent further oxidization.";
+        addTooltip(Blocks.COPPER_BLOCK, copperTooltip, unoxidizedTooltip);
+        addTooltip(Blocks.EXPOSED_COPPER, copperTooltip, exposedTooltip);
+        addTooltip(Blocks.WEATHERED_COPPER, copperTooltip, weatheredTooltip);
+        addTooltip(Blocks.OXIDIZED_COPPER, copperTooltip, oxidizedTooltip);
+        addTooltip(Blocks.WAXED_COPPER_BLOCK, copperTooltip, waxedTooltip);
+        addTooltip(Blocks.WAXED_EXPOSED_COPPER, copperTooltip, waxedTooltip);
+        addTooltip(Blocks.WAXED_WEATHERED_COPPER, copperTooltip, waxedTooltip);
+        addTooltip(Blocks.WAXED_OXIDIZED_COPPER, copperTooltip, waxedTooltip);
+
+        addTooltip(Blocks.OXIDIZED_CUT_COPPER, cutCopperTooltip, oxidizedTooltip);
         addTooltipForVariants(Blocks.OXIDIZED_CUT_COPPER, Blocks.OXIDIZED_CUT_COPPER_STAIRS, Blocks.OXIDIZED_CUT_COPPER_SLAB);
-        addTooltip(Blocks.WEATHERED_CUT_COPPER, cutCopperTooltip);
+        addTooltip(Blocks.WEATHERED_CUT_COPPER, cutCopperTooltip, weatheredTooltip);
         addTooltipForVariants(Blocks.WEATHERED_CUT_COPPER, Blocks.WEATHERED_CUT_COPPER_STAIRS, Blocks.WEATHERED_CUT_COPPER_SLAB);
-        addTooltip(Blocks.EXPOSED_CUT_COPPER, cutCopperTooltip);
+        addTooltip(Blocks.EXPOSED_CUT_COPPER, cutCopperTooltip, exposedTooltip);
         addTooltipForVariants(Blocks.EXPOSED_CUT_COPPER, Blocks.EXPOSED_CUT_COPPER_STAIRS, Blocks.EXPOSED_CUT_COPPER_SLAB);
-        addTooltip(Blocks.CUT_COPPER, cutCopperTooltip);
+        addTooltip(Blocks.CUT_COPPER, cutCopperTooltip, unoxidizedTooltip);
         addTooltipForVariants(Blocks.CUT_COPPER, Blocks.CUT_COPPER_STAIRS, Blocks.CUT_COPPER_SLAB);
-        addTooltip(Blocks.WAXED_OXIDIZED_CUT_COPPER, cutCopperTooltip);
+
+        addTooltip(Blocks.WAXED_OXIDIZED_CUT_COPPER, cutCopperTooltip, waxedTooltip);
         addTooltipForVariants(Blocks.WAXED_OXIDIZED_CUT_COPPER, Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB);
-        addTooltip(Blocks.WAXED_WEATHERED_CUT_COPPER, cutCopperTooltip);
+        addTooltip(Blocks.WAXED_WEATHERED_CUT_COPPER, cutCopperTooltip, waxedTooltip);
         addTooltipForVariants(Blocks.WAXED_WEATHERED_CUT_COPPER, Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB);
-        addTooltip(Blocks.WAXED_EXPOSED_CUT_COPPER, cutCopperTooltip);
+        addTooltip(Blocks.WAXED_EXPOSED_CUT_COPPER, cutCopperTooltip, waxedTooltip);
         addTooltipForVariants(Blocks.WAXED_EXPOSED_CUT_COPPER, Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB);
-        addTooltip(Blocks.WAXED_CUT_COPPER, cutCopperTooltip);
+        addTooltip(Blocks.WAXED_CUT_COPPER, cutCopperTooltip, waxedTooltip);
         addTooltipForVariants(Blocks.WAXED_CUT_COPPER, Blocks.WAXED_CUT_COPPER_STAIRS, Blocks.WAXED_CUT_COPPER_SLAB);
         addTooltip(Blocks.RAW_COPPER_BLOCK, "A solid block made of raw copper, partially oxidized.");
         addTooltip(Blocks.DIAMOND_BLOCK, "A solid block made of diamonds.", "Shiny!");
@@ -532,12 +563,14 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.CHISELED_QUARTZ_BLOCK, "A quartz block cut with a specific pattern.");
         addTooltip(Blocks.QUARTZ_PILLAR, "A quartz block cut in the shape of a pillar.");
         addTooltip(Blocks.QUARTZ_BRICKS, "A quartz block cut into bricks.");
+        addTooltip(Blocks.SMOOTH_QUARTZ, "A polished block crafted from quartz.");
+        addTooltipForVariants(Blocks.SMOOTH_QUARTZ, Blocks.SMOOTH_QUARTZ_STAIRS, Blocks.SMOOTH_QUARTZ_SLAB);
         addTooltip(Blocks.REDSTONE_BLOCK, "A solid block made of compacted redstone dust.", "Provides a redstone power source to adjacent blocks.");
     }
     private void manufactured() {
         addTooltip(Blocks.BOOKSHELF, "A wooden shelf filled with books.", "Some villagers keep large collections of them.");
         addTooltip(Blocks.BRICKS, "Smelted clay bricks used for building.");
-        addTooltipForVariants(Blocks.BRICKS, Blocks.BRICK_STAIRS, Blocks.BRICK_SLAB);
+        addTooltipForVariants(Blocks.BRICKS, Blocks.BRICK_STAIRS, Blocks.BRICK_SLAB, Blocks.BRICK_WALL);
         addTooltip(Blocks.CHISELED_DEEPSLATE, "Deepslate cut with a specific pattern.", "It appears to represent some kind of skull.");
         addTooltip(Blocks.COBBLED_DEEPSLATE, "A natural building material made of deepslate.");
         addTooltipForVariants(Blocks.COBBLED_DEEPSLATE, Blocks.COBBLED_DEEPSLATE_SLAB, Blocks.COBBLED_DEEPSLATE_STAIRS, Blocks.COBBLED_DEEPSLATE_WALL);
@@ -680,7 +713,10 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.SOUL_TORCH, "A torch that creates light by burning souls.");
     }
     private void interactable() {
-        addTooltip(Blocks.ANVIL, "A metalworking tool used to repair, enchant, and rename items.");
+        var anvilTooltip = addTooltipText("A metalworking tool used to repair, enchant, and rename items.");
+        addTooltip(Blocks.ANVIL, anvilTooltip);
+        addTooltip(Blocks.CHIPPED_ANVIL, anvilTooltip);
+        addTooltip(Blocks.DAMAGED_ANVIL, anvilTooltip);
         addTooltip(Blocks.BARREL, "A simple container used as a workstation by fishermen Villagers.");
         addTooltip(Blocks.BEACON, "A powerful, effect-granting block created using a Nether Star dropped by the Wither.");
         addTooltip(Blocks.BREWING_STAND, "A piece of lab equipment used to brew potions and used as a workstation by cleric Villagers.");
@@ -1164,6 +1200,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.MUSIC_DISC_5, discTooltip);
         addTooltip(Items.MUSIC_DISC_11, discTooltip);
         addTooltip(Items.MUSIC_DISC_13, discTooltip);
+        addTooltip(Items.DISC_FRAGMENT_5, "A fragment of a music disc, found in an Ancient City.");
         var spawnEggs = addTooltipText("A strange, multi-colored egg.", "When used, it hatches into a mob through an unknown process.");
         addTooltip(Items.ALLAY_SPAWN_EGG, spawnEggs);
         addTooltip(Items.AXOLOTL_SPAWN_EGG, spawnEggs);
@@ -1249,6 +1286,11 @@ public class ETLanguageProvider extends LanguageProvider {
 
     private void addTooltip(Block block, String... tooltip) {
         add(block.getDescriptionId() + ".expanded_tooltips.desc", String.join("\n", tooltip));
+    }
+
+    private void addCopperTooltips(Block block, String copperTooltip, String weatheredStateTooltip) {
+        var tooltipText = addTooltipText(copperTooltip, weatheredStateTooltip);
+        addTooltip(block, copperTooltip);
     }
 
     private void addTooltipForVariants(Block baseBlock, Block... variants) {
