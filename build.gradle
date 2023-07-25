@@ -5,7 +5,7 @@ plugins {
     id 'org.spongepowered.mixin' version '0.7-SNAPSHOT'
 }
 
-version = "${modVersion}"
+version = "${mcVersion}-${modVersion}"
 group = "com.uraneptus.${modId}"
 archivesBaseName = "${modId}"
 
