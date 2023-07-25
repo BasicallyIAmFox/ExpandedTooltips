@@ -4,6 +4,7 @@ import net.minecraft.client.resources.language.I18n;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.TippedArrowItem;
 import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.*;
@@ -1360,19 +1361,43 @@ public class ETLanguageProvider extends LanguageProvider {
         List<String> potionTranslationKeys = new ArrayList<>();
         for (Potion potion : ForgeRegistries.POTIONS.getValues()) {
             if (potion != Potions.EMPTY) {
-                String translationKey = potion.getName(potionItem.getDescriptionId() + ".effect.") + ".expanded_tooltips.desc";
-                if (!potionTranslationKeys.contains(translationKey)) {
-                    potionTranslationKeys.add(translationKey);
+                String translationKey = getPotionTooltipKey(potion, potionItem);
+                if (potion != Potions.WATER) {
+                    if (potion != Potions.THICK && potion != Potions.AWKWARD && potion != Potions.MUNDANE) {
+                        if (!potionTranslationKeys.contains(translationKey)) {
+                            potionTranslationKeys.add(translationKey);
+                        }
+                    } else {
+                        if (!(potionItem instanceof TippedArrowItem)) {
+                            addTooltip(translationKey, "An unfinished potion with no effect.");
+                        } else {
+                            addTooltip(translationKey, "An arrow dipped in an unfinished potion, granting no effect");
+                        }
+                    }
+                } else {
+                    if (!(potionItem instanceof TippedArrowItem)) {
+                        addTooltip(translationKey, "A glass bottle filled with water.", "An important ingredient for potion brewing.");
+                    } else {
+                        addTooltip(translationKey, "An arrow dipped in water, granting no effect");
+                    }
                 }
             }
         }
         for (String key : potionTranslationKeys) {
-            add(key, String.join("\n", tooltip));
+            addTooltip(key, tooltip);
         }
+    }
+
+    private String getPotionTooltipKey(Potion potion, Item potionItem) {
+        return potion.getName(potionItem.getDescriptionId() + ".effect.") + ".expanded_tooltips.desc";
     }
 
     public void addTooltip(Item item, String... tooltip) {
         add(item.getDescriptionId() + ".expanded_tooltips.desc", String.join("\n", tooltip));
+    }
+
+    public void addTooltip(String key, String... tooltip) {
+        add(key, String.join("\n", tooltip));
     }
 
     public String[] addTooltipText(String... tooltip) {
