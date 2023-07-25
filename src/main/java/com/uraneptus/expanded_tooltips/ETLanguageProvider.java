@@ -1288,16 +1288,11 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.PAINTING, "A canvas with a mysterious pattern painted on it.", "Does it mean something?");
     }
 
-    private void addTooltip(Block block, String... tooltip) {
+    public void addTooltip(Block block, String... tooltip) {
         add(block.getDescriptionId() + ".expanded_tooltips.desc", String.join("\n", tooltip));
     }
 
-    private void addCopperTooltips(Block block, String copperTooltip, String weatheredStateTooltip) {
-        var tooltipText = addTooltipText(copperTooltip, weatheredStateTooltip);
-        addTooltip(block, copperTooltip);
-    }
-
-    private void addTooltipForVariants(Block baseBlock, Block... variants) {
+    public void addTooltipForVariants(Block baseBlock, Block... variants) {
         for (Block variant : variants) {
             if (variant instanceof StairBlock) {
                 addTooltip(variant, "Stairs crafted from " + I18n.get(baseBlock.getDescriptionId()));
@@ -1320,7 +1315,7 @@ public class ETLanguageProvider extends LanguageProvider {
         }
     }
 
-    private void addWoodsetTooltip(boolean isOvWood, Block baseBlock, String[] optionalBaseBlockTooltip, Block... variants) {
+    public void addWoodsetTooltip(boolean isOvWood, Block baseBlock, String[] optionalBaseBlockTooltip, Block... variants) {
         if (Arrays.stream(optionalBaseBlockTooltip).toList().isEmpty()) {
             var planksTooltip = isOvWood ? "Planks crafted from an Overworld log." : "Planks crafted from a Nether stem.";
             addTooltip(baseBlock, planksTooltip, "Very versatile in crafting.");
@@ -1361,7 +1356,7 @@ public class ETLanguageProvider extends LanguageProvider {
         }
     }
 
-    private void addPotionTooltips(Item potionItem, String... tooltip) {
+    public void addPotionTooltips(Item potionItem, String... tooltip) {
         List<String> potionTranslationKeys = new ArrayList<>();
         for (Potion potion : ForgeRegistries.POTIONS.getValues()) {
             if (potion != Potions.EMPTY) {
@@ -1376,11 +1371,11 @@ public class ETLanguageProvider extends LanguageProvider {
         }
     }
 
-    private void addTooltip(Item item, String... tooltip) {
+    public void addTooltip(Item item, String... tooltip) {
         add(item.getDescriptionId() + ".expanded_tooltips.desc", String.join("\n", tooltip));
     }
 
-    private String[] addTooltipText(String... tooltip) {
+    public String[] addTooltipText(String... tooltip) {
         return tooltip;
     }
 }
