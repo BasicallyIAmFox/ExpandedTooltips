@@ -4,9 +4,13 @@ import net.minecraft.client.resources.language.I18n;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.common.data.LanguageProvider;
+import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -1026,9 +1030,9 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.GOLDEN_PICKAXE, "A pickaxe made of smelted gold. Used to mine stone materials.");
         addTooltip(Items.DIAMOND_PICKAXE, "A pickaxe made of the Overworld’s strongest mineral. Used to mine stone materials.");
         addTooltip(Items.NETHERITE_PICKAXE, "A diamond pickaxe enhanced with Netherite.", "This makes it impervious to fire.");
-        addTooltip(Items.POTION, "A brewed drink that grants an effect to creatures who drink it.");
-        addTooltip(Items.LINGERING_POTION, "A brewed drink that creates an effect-granting cloud of gas.");
-        addTooltip(Items.SPLASH_POTION, "A brewed drink that grants effects to creatures splashed by it.");
+        addPotionTooltips(Items.POTION,  "A brewed drink that grants an effect to creatures who drink it.");
+        addPotionTooltips(Items.LINGERING_POTION,  "A brewed drink that creates an effect-granting cloud of gas.");
+        addPotionTooltips(Items.SPLASH_POTION,  "A brewed drink that grants effects to creatures splashed by it.");
         addTooltip(Items.SHEARS, "A tool used to cut grasses and leaves, and to shear sheep.");
         addTooltip(Items.WOODEN_SHOVEL, "A shovel made of wood or hypha. Used to dig through some natural materials.");
         addTooltip(Items.STONE_SHOVEL, "A shovel made of certain stones. Used to dig through some natural materials.");
@@ -1054,7 +1058,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.ARROW, "A pointed stick fired from a bow or crossbow.");
         addTooltip(Items.BRUSH, "A tool used to excavate ancient artifacts.");
         addTooltip(Items.SPECTRAL_ARROW, "A magical arrow that inflicts the glowing effect on anything it hits.");
-        addTooltip(Items.TIPPED_ARROW, "An arrow dipped in a potion, granting an effect to anyone it hits.");
+        addPotionTooltips(Items.TIPPED_ARROW, "An arrow dipped in a potion, granting an effect to anyone it hits.");
         addTooltip(Items.BOW, "A weapon used to fire many types of arrows.");
         addTooltip(Items.CROSSBOW, "A stronger bow that must be charged before using.");
         addTooltip(Items.EGG, "A chicken’s egg.", "Will sometimes hatch when thrown.");
@@ -1354,6 +1358,21 @@ public class ETLanguageProvider extends LanguageProvider {
             if (variant instanceof CeilingHangingSignBlock) {
                 addTooltip(variant, "A hanging sign crafted from " + I18n.get(baseBlock.getDescriptionId()));
             }
+        }
+    }
+
+    private void addPotionTooltips(Item potionItem, String... tooltip) {
+        List<String> potionTranslationKeys = new ArrayList<>();
+        for (Potion potion : ForgeRegistries.POTIONS.getValues()) {
+            if (potion != Potions.EMPTY) {
+                String translationKey = potion.getName(potionItem.getDescriptionId() + ".effect.") + ".expanded_tooltips.desc";
+                if (!potionTranslationKeys.contains(translationKey)) {
+                    potionTranslationKeys.add(translationKey);
+                }
+            }
+        }
+        for (String key : potionTranslationKeys) {
+            add(key, String.join("\n", tooltip));
         }
     }
 
