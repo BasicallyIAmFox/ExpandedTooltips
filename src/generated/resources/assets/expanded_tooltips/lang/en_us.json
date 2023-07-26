@@ -301,7 +301,7 @@
   "block.minecraft.dripstone_block.expanded_tooltips.desc": "A strange rock, formed by time in the Dripstone Caves.\nHowever it is very brittle, making it not carvable.",
   "block.minecraft.dropper.expanded_tooltips.desc": "A redstone component that drops items when it receives a redstone signal.",
   "block.minecraft.emerald_block.expanded_tooltips.desc": "A solid block made of emeralds.\nVillagers will not accept it when trading.",
-  "block.minecraft.emerald_ore.expanded_tooltips.desc": "A block of stone, with chunks of Emerald inside.\n Common in high mountains, so this variant is a rarity.",
+  "block.minecraft.emerald_ore.expanded_tooltips.desc": "A block of stone, with chunks of Emerald inside.\nCommon in high mountains, so this variant is a rarity.",
   "block.minecraft.enchanting_table.expanded_tooltips.desc": "A magical workbench used for enchanting.\nSurrounding it with books increases its power and draws strange runes to its tome.",
   "block.minecraft.end_gateway.expanded_tooltips.desc": "A portal that teleports you throughout The End.",
   "block.minecraft.end_portal.expanded_tooltips.desc": "A portal that teleports you to the main island in The End.",
