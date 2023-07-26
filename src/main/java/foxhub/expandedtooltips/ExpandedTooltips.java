@@ -1,14 +1,12 @@
 package foxhub.expandedtooltips;
 
 import net.fabricmc.api.ModInitializer;
-
+import net.minecraft.SharedConstants;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -27,7 +25,7 @@ public class ExpandedTooltips implements ModInitializer {
                 list.add(Text.literal(text).fillStyle(DESCRIPTION_STYLE));
             }
         }
-        else {
+        else if (!SharedConstants.isDevelopment) {
             list.add(Text.literal(key));
         }
     }
