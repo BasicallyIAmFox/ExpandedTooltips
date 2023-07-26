@@ -12,6 +12,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLEnvironment;
 
 import java.util.List;
 
@@ -40,7 +41,8 @@ public class ExpandedTooltips {
             for (var text : split) {
                 list.add(Component.literal(text).withStyle(DESCRIPTION_STYLE));
             }
-        } else {
+         //Only if not in dev environment
+        } else if (!FMLEnvironment.production) {
             list.add(Component.literal(key));
         }
     }
