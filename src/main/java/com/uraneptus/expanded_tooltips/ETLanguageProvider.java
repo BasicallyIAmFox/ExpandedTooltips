@@ -166,7 +166,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.COAL_ORE, "A block of stone, with chunks of Coal inside.", "It is most common throughout the surface of the Overworld.");
         addTooltip(Blocks.COPPER_ORE, "A block of stone, with chunks of Copper inside.", "Common in higher-level caves, especially Dripstone Caves.");
         addTooltip(Blocks.DIAMOND_ORE, "A block of stone, with chunks of Diamond inside.", "Common in Deepslate, so finding this variant is a rarity.");
-        addTooltip(Blocks.EMERALD_ORE, "A block of stone, with chunks of Emerald inside.", " Common in high mountains, so this variant is a rarity.");
+        addTooltip(Blocks.EMERALD_ORE, "A block of stone, with chunks of Emerald inside.", "Common in high mountains, so this variant is a rarity.");
         addTooltip(Blocks.IRON_ORE, "A block of stone, with chunks of Iron inside.", "Most common high up, but large veins can be in lower caves.");
         addTooltip(Blocks.LAPIS_ORE, "A block of stone, with chunks of Lapis Lazuli inside.", "It is rare, spread throughout every layer of the Overworld.");
         addTooltip(Blocks.REDSTONE_ORE, "A block of stone, with crystals of Redstone inside.", "It gets more common as depth increases.");
