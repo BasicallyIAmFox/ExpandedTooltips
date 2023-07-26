@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[47,)"
-license="All rights reserved"
+license="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
 [[mods]]
 modId="expanded_tooltips"
 version="${file.jarVersion}"
