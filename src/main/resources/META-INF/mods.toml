@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[45,)"
+loaderVersion="[43,)"
 license="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
 [[mods]]
 modId="expanded_tooltips"
@@ -10,17 +10,16 @@ logoFile="icon.png"
 credits=""
 authors="Uraneptus, Rolly"
 description='''
-A simple mod allowing for custom item descriptions.
-'''
+A simple mod allowing for custom item descriptions.'''
 [[dependencies.expanded_tooltips]]
     modId="forge"
     mandatory=true
-    versionRange="[45,)"
+    versionRange="[43,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.expanded_tooltips]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.4,1.20)"
+    versionRange="[1.19.2,1.19.4)"
     ordering="NONE"
     side="BOTH"

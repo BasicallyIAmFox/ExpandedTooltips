@@ -31,7 +31,7 @@ public class ExpandedTooltips {
     public void gatherData(GatherDataEvent event) {
         boolean includeClient = event.includeClient();
         DataGenerator generator = event.getGenerator();
-        generator.addProvider(includeClient, new ETLanguageProvider(generator.getPackOutput()));
+        generator.addProvider(includeClient, new ETLanguageProvider(generator));
     }
 
     public static void addText(ItemStack stack, List<Component> list) {
