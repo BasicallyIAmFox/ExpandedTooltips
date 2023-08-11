@@ -21,8 +21,10 @@ public class ExpandedTooltips implements ModInitializer {
         var key = stack.getTranslationKey() + ".expanded_tooltips.desc";
         if (I18n.hasTranslation(key)) {
             var split = I18n.translate(key).split("\\n");
-            for (var text : split) {
-                list.add(Text.literal(text).fillStyle(DESCRIPTION_STYLE));
+            if (!I18n.translate(key).equals("")) {
+                for (var text : split) {
+                    list.add(Text.literal(text).setStyle(DESCRIPTION_STYLE));
+                }
             }
         }
         else if (!SharedConstants.isDevelopment) {
