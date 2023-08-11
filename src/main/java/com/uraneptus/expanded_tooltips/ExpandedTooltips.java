@@ -38,10 +38,11 @@ public class ExpandedTooltips {
         var key = stack.getDescriptionId() + ".expanded_tooltips.desc";
         if (I18n.exists(key)) {
             var split = I18n.get(key).split("\\n");
-            for (var text : split) {
-                list.add(Component.literal(text).withStyle(DESCRIPTION_STYLE));
+            if (!I18n.get(key).equals("")) {
+                for (var text : split) {
+                    list.add(Component.literal(text).withStyle(DESCRIPTION_STYLE));
+                }
             }
-        //Only if not in dev environment
         } else if (!FMLEnvironment.production) {
             list.add(Component.literal(key));
         }
