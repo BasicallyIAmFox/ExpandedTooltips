@@ -27,7 +27,7 @@ public class ExpandedTooltips implements ModInitializer {
                 }
             }
         }
-        else if (!SharedConstants.isDevelopment) {
+        else if (SharedConstants.isDevelopment) {
             list.add(Text.literal(key));
         }
     }
