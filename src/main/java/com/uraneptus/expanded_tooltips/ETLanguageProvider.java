@@ -81,7 +81,6 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.DIRT_PATH, "A well-worn path made in the dirt.", "Its top has the appearance of dead grass.");
         addTooltip(Blocks.GRASS_BLOCK, "A block of soil which has sprung life.", "Its color depends on the temperature of the biome.");
         addTooltip(Blocks.GRAVEL, "A block made up of many tiny stones.", "Abides by the laws of gravity that govern entities.");
-        //1.20 addTooltip(Blocks.SUSPICIOUS_GRAVEL, "A block of sediment with ancient artifacts inside.");
         addTooltip(Blocks.MUD, "A block of wet dirt, rich with minerals.", "Supports the unique plant life of Mangrove Swamps.");
         addTooltip(Blocks.MYCELIUM, "A block of dirt part of a network of mushrooms.", "Supports the growth of mushrooms even in bright areas.");
         var nyliumTooltip = addTooltipText("A block of netherrack part of a network of Nether fungus.", "Unlike mycelium, bone meal can be used to spread it.");
@@ -107,7 +106,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltipForVariants(Blocks.COBBLESTONE, Blocks.COBBLESTONE_STAIRS, Blocks.COBBLESTONE_SLAB, Blocks.COBBLESTONE_WALL);
         addTooltip(Blocks.MOSSY_COBBLESTONE, "A block of cobblestone, covered in moss.", "Found in many mysterious ancient structures.");
         addTooltipForVariants(Blocks.MOSSY_COBBLESTONE, Blocks.MOSSY_COBBLESTONE_STAIRS, Blocks.MOSSY_COBBLESTONE_SLAB, Blocks.MOSSY_COBBLESTONE_WALL);
-        addTooltip(Blocks.DEEPSLATE, "A hard stone found in the deepest caverns of the Overworld.", "Rare materials can be found within it, if one is lucky.");
+        addTooltip(Blocks.DEEPSLATE, "A hard stone found in the depths of the Overworld.", "Rare materials can be found within it, if one is lucky.");
         addTooltip(Blocks.DIORITE, "An igneous rock found in the Overworld.", "It is an abundant resource useful for decoration.");
         addTooltipForVariants(Blocks.DIORITE, Blocks.DIORITE_STAIRS, Blocks.DIORITE_SLAB, Blocks.DIORITE_WALL);
         addTooltip(Blocks.DRIPSTONE_BLOCK, "A strange rock, formed by time in the Dripstone Caves.", "However it is very brittle, making it not carvable.");
@@ -132,7 +131,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltipForVariants(Blocks.SANDSTONE, Blocks.SANDSTONE_STAIRS, Blocks.SANDSTONE_SLAB, Blocks.SANDSTONE_WALL);
         addTooltip(Blocks.RED_SANDSTONE, "A sedimentary rock commonly found below red sand.", "Trace amounts of iron give it a more reddish appearance.");
         addTooltipForVariants(Blocks.RED_SANDSTONE, Blocks.RED_SANDSTONE_STAIRS, Blocks.RED_SANDSTONE_SLAB, Blocks.RED_SANDSTONE_WALL);
-        addTooltip(Blocks.STONE, "A very versatile material, making up the majority of the Overworld’s upper layers.");
+        addTooltip(Blocks.STONE, "A very versatile material.", "Makes up the Overworld’s upper layers.");
         addTooltipForVariants(Blocks.STONE, Blocks.STONE_STAIRS, Blocks.STONE_SLAB, Blocks.STONE_PRESSURE_PLATE, Blocks.STONE_BUTTON);
         var terracottaTooltip = addTooltipText("A hardened block of clay.", "Makes beautiful multi-colored stripes in Badlands.");
         addTooltip(Blocks.TERRACOTTA, terracottaTooltip);
@@ -175,9 +174,9 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.DEEPSLATE_IRON_ORE, "A block of deepslate embedded with iron.", "Great amounts can be found in large veins.");
         addTooltip(Blocks.DEEPSLATE_GOLD_ORE, "A block of deepslate embedded with gold.", "Tends to be found lower down.");
         addTooltip(Blocks.DEEPSLATE_DIAMOND_ORE, "A block of deepslate embedded with diamond.", "More common as you descend.");
-        addTooltip(Blocks.DEEPSLATE_REDSTONE_ORE, "A block of deepslate embedded with redstone", "More common as you descend.");
-        addTooltip(Blocks.DEEPSLATE_LAPIS_ORE, "A block of deepslate embedded with lapis lazuli", "Rare, but spread throughout many layers of the Overworld.");
-        addTooltip(Blocks.DEEPSLATE_EMERALD_ORE, "A block of deepslate embedded with emerald", "Common in high mountains, so this variant is a rarity.");
+        addTooltip(Blocks.DEEPSLATE_REDSTONE_ORE, "A block of deepslate embedded with redstone.", "More common as you descend.");
+        addTooltip(Blocks.DEEPSLATE_LAPIS_ORE, "A block of deepslate embedded with lapis lazuli.", "Rare, but spread throughout many layers of the Overworld.");
+        addTooltip(Blocks.DEEPSLATE_EMERALD_ORE, "A block of deepslate embedded with emerald.", "Common in high mountains, so this variant is a rarity.");
         addTooltip(Blocks.NETHER_GOLD_ORE, "A block of netherrack, with small chunks of Gold inside.", "It can be found all throughout the Nether.");
         addTooltip(Blocks.NETHER_QUARTZ_ORE, "A block of netherrack, with chunks of Quartz inside.", "It can be found all throughout the Nether.");
     }
@@ -236,7 +235,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.STRIPPED_MANGROVE_WOOD, strippedOverworldWoodTooltip);
         addTooltip(Blocks.MANGROVE_ROOTS, "Large above-ground roots from mangrove trees.", "Keep them tied to the swampy ground.");
         addTooltip(Blocks.MUDDY_MANGROVE_ROOTS, "Large above-ground roots from mangrove trees.", "Found tangled through the thick mud of Mangrove Swamps.");
-        var netherStemTooltip = addTooltipText("The stem of a huge fungus found in the Nether.", "Somehow immune to flame, unlike its Overworld counterpart.");
+        var netherStemTooltip = addTooltipText("The stem of a huge fungus found in the Nether.", "Immune to flame, unlike its Overworld counterpart.");
         addTooltip(Blocks.CRIMSON_STEM, netherStemTooltip);
         addTooltip(Blocks.WARPED_STEM, netherStemTooltip);
         var strippedNetherStemTooltip = addTooltipText("Nether stem removed of its outer layer using an axe.");
@@ -254,7 +253,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.FLOWERING_AZALEA, "A bush that grows in the Lush Caves biome, adorned with pink flowers.");
         addTooltip(Blocks.BAMBOO, "A tall & sturdy plant found in the Jungle biome.", "Grows extremely fast, making it a great fuel source.");
         addTooltip(Blocks.SMALL_DRIPLEAF, "A strange plant found in the Lush Caves.", "Unable to hold creatures, unlike its larger counterpart.");
-        addTooltip(Blocks.BIG_DRIPLEAF, "A strange plant found in the Lush Caves.", "The strong stem holds creatures for a moment before sagging.");
+        addTooltip(Blocks.BIG_DRIPLEAF, "A strange plant found in the Lush Caves.", "The strong stem holds creatures for a moment.");
         addTooltip(Blocks.CACTUS, "Prickly on the outside, wet on the inside.", "Found in desert biomes and used to create a green pigment.");
         addTooltip(Blocks.CAVE_VINES, "Glow Berry vines that grow on the ceilings of Lush Caves.", "Not very filling, but a useful food source when spelunking.");
         addTooltip(Blocks.COCOA, "A bean found on the side of Jungle trees.", "Used to make delicious chocolate chip cookies.");
@@ -299,7 +298,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.SPRUCE_LEAVES, leavesTooltip);
         addTooltip(Blocks.LILY_PAD, "Floating plants found in Overworld swamps.", "Can support the weight of many creatures.");
         addTooltip(Blocks.MELON, "A large, juicy fruit, found in the Jungle biome.");
-        var mossTooltip = addTooltipText("A plant that grows in some places in the Overworld, especially in moist environments such as the Lush Caves.");
+        var mossTooltip = addTooltipText("A plant that grows in certain places in the Overworld.", "Common in moist environments such as the Lush Caves.");
         addTooltip(Blocks.MOSS_BLOCK, mossTooltip);
         addTooltip(Blocks.MOSS_CARPET, mossTooltip);
         addTooltip(Blocks.PUMPKIN, "Large orange gourds often used in Golem creation.", "Found in groups across the Overworld.");
@@ -315,8 +314,8 @@ public class ETLanguageProvider extends LanguageProvider {
         var seagrassesTooltip = addTooltipText("A small plant found under the Overworld’s oceans and rivers.");
         addTooltip(Blocks.SEAGRASS, seagrassesTooltip);
         addTooltip(Blocks.TALL_SEAGRASS, seagrassesTooltip);
-        addTooltip(Blocks.SPORE_BLOSSOM, "Large pink flowers found hanging from the ceilings of Lush caves.");
-        addTooltip(Blocks.SUGAR_CANE, "A reed found near water that can be crushed into sugar, or crafted into parchment.");
+        addTooltip(Blocks.SPORE_BLOSSOM, "Large pink flowers found hanging in Lush caves.");
+        addTooltip(Blocks.SUGAR_CANE, "A reed found near water that can be crushed into sugar.", "Also used to craft into parchment.");
         addTooltip(Blocks.VINE, "A plant that grows all over the sides of other blocks.", "Mostly found in lush, forested biomes.");
         addTooltip(Blocks.HAY_BLOCK, "A bundled block of nine bunches of wheat.", "Found in large piles in Villages.");
     }
@@ -356,32 +355,32 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.DEAD_BUBBLE_CORAL, deadCoralTooltip);
         addTooltip(Blocks.DEAD_FIRE_CORAL, deadCoralTooltip);
         addTooltip(Blocks.DEAD_HORN_CORAL, deadCoralTooltip);
-        var coralBlocksTooltip = addTooltipText("A block-like underwater creature part of a coral colony, found in reefs.");
+        var coralBlocksTooltip = addTooltipText("A block-like underwater creature.", "Part of a coral colony, found in reefs.");
         addTooltip(Blocks.TUBE_CORAL_BLOCK, coralBlocksTooltip);
         addTooltip(Blocks.BRAIN_CORAL_BLOCK, coralBlocksTooltip);
         addTooltip(Blocks.BUBBLE_CORAL_BLOCK, coralBlocksTooltip);
         addTooltip(Blocks.FIRE_CORAL_BLOCK, coralBlocksTooltip);
         addTooltip(Blocks.HORN_CORAL_BLOCK, coralBlocksTooltip);
-        var deadCoralBlocksTooltip = addTooltipText("A block of dried-out coral, created when there isn’t enough water.");
+        var deadCoralBlocksTooltip = addTooltipText("A block of dried-out coral.", "Created when there isn’t enough water.");
         addTooltip(Blocks.DEAD_TUBE_CORAL_BLOCK, deadCoralBlocksTooltip);
         addTooltip(Blocks.DEAD_BRAIN_CORAL_BLOCK, deadCoralBlocksTooltip);
         addTooltip(Blocks.DEAD_BUBBLE_CORAL_BLOCK, deadCoralBlocksTooltip);
         addTooltip(Blocks.DEAD_FIRE_CORAL_BLOCK, deadCoralBlocksTooltip);
         addTooltip(Blocks.DEAD_HORN_CORAL_BLOCK, deadCoralBlocksTooltip);
-        var coralFansTooltip = addTooltipText("A small piece of coral, found growing on coral colonies in reefs.");
+        var coralFansTooltip = addTooltipText("A small piece of coral.", "Found growing on coral colonies in reefs.");
         addTooltip(Blocks.TUBE_CORAL_FAN, coralFansTooltip);
         addTooltip(Blocks.BRAIN_CORAL_FAN, coralFansTooltip);
         addTooltip(Blocks.BUBBLE_CORAL_FAN, coralFansTooltip);
         addTooltip(Blocks.FIRE_CORAL_FAN, coralFansTooltip);
         addTooltip(Blocks.HORN_CORAL_FAN, coralFansTooltip);
-        var deadCoralFansTooltip = addTooltipText("A small piece of dried-out coral, created when there isn’t enough water.");
+        var deadCoralFansTooltip = addTooltipText("A small piece of dried-out coral.", "Created when there isn’t enough water.");
         addTooltip(Blocks.DEAD_TUBE_CORAL_FAN, deadCoralFansTooltip);
         addTooltip(Blocks.DEAD_BRAIN_CORAL_FAN, deadCoralFansTooltip);
         addTooltip(Blocks.DEAD_BUBBLE_CORAL_FAN, deadCoralFansTooltip);
         addTooltip(Blocks.DEAD_FIRE_CORAL_FAN, deadCoralFansTooltip);
         addTooltip(Blocks.DEAD_HORN_CORAL_FAN, deadCoralFansTooltip);
         addTooltip(Blocks.SEA_PICKLE, "A strange, glowing, marine creature found on the seafloor.", "Sometimes found in groups of up to four.");
-        addTooltip(Blocks.SPONGE, "A porous block able to soak up water.", "Due to their rarity, this may be the true treasure that the Elder Guardians were hiding.");
+        addTooltip(Blocks.SPONGE, "A porous block able to soak up water.", "Only found in Ocean Monuments.");
         addTooltip(Blocks.WET_SPONGE, "A sponge made useless by absorbed water.", "Can be dried out, allowing the moisture to be collected in a bucket.");
     }
     private void faunaProduct() {
@@ -395,13 +394,13 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.PEARLESCENT_FROGLIGHT, froglightsTooltip);
         addTooltip(Blocks.VERDANT_FROGLIGHT, froglightsTooltip);
         addTooltip(Blocks.HONEY_BLOCK, "A solid block of honey, crafted from four bottles of honey.", "It’s sticky!");
-        addTooltip(Blocks.SLIME_BLOCK, "A block of slime that can be used to stick other blocks together.");
+        addTooltip(Blocks.SLIME_BLOCK, "A block of slime.", "Used to stick other blocks together.");
         addTooltip(Blocks.TURTLE_EGG, "The eggs of a Turtle, laid on beaches.", "Undead creatures have an unexplainable attraction to them.");
         var mobHeadsTooltip = addTooltipText("The head of a hostile creature found in the Overworld.");
         addTooltip(Blocks.CREEPER_HEAD, mobHeadsTooltip);
         addTooltip(Blocks.ZOMBIE_HEAD, mobHeadsTooltip);
         addTooltip(Blocks.SKELETON_SKULL, mobHeadsTooltip);
-        addTooltip(Blocks.WITHER_SKELETON_SKULL, "The skull of a Wither Skeleton.", "It seems to show up in a structure depicted on a certain painting.");
+        addTooltip(Blocks.WITHER_SKELETON_SKULL, "The skull of a Wither Skeleton.", "Shows up in a structure depicted on a certain painting.");
         addTooltip(Blocks.DRAGON_HEAD, "A replica of an Ender Dragon’s head.", "Found as the figurehead on End Ships.");
         addTooltip(Blocks.PLAYER_HEAD, "The head of a creature similar to yourself.", "It is a mystery how it got here.");
     }
@@ -602,7 +601,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.GREEN_CONCRETE_POWDER, concretePowderTooltip);
         addTooltip(Blocks.RED_CONCRETE_POWDER, concretePowderTooltip);
         addTooltip(Blocks.BLACK_CONCRETE_POWDER, concretePowderTooltip);
-        addTooltip(Blocks.CUT_SANDSTONE, "Compacted, smooth sandstone.", "Used in the architecture of Desert Villages and Pyramids.");
+        addTooltip(Blocks.CUT_SANDSTONE, "Compacted, smooth sandstone.", "Used in the architecture of Deserts.");
         addTooltip(Blocks.CUT_RED_SANDSTONE, "Compacted, smooth red sandstone.", "Not used in any structures discovered so far.");
         addTooltipForVariants(Blocks.CUT_SANDSTONE, Blocks.CUT_SANDSTONE_SLAB);
         addTooltipForVariants(Blocks.CUT_RED_SANDSTONE, Blocks.CUT_RED_SANDSTONE_SLAB);
@@ -612,17 +611,17 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltipForVariants(Blocks.SMOOTH_SANDSTONE, Blocks.SMOOTH_SANDSTONE_SLAB, Blocks.SMOOTH_SANDSTONE_STAIRS);
         addTooltip(Blocks.SMOOTH_RED_SANDSTONE, "Red sandstone polished and smoothened.", "Not used in any structures discovered so far.");
         addTooltipForVariants(Blocks.SMOOTH_RED_SANDSTONE, Blocks.SMOOTH_RED_SANDSTONE_SLAB, Blocks.SMOOTH_RED_SANDSTONE_STAIRS);
-        addTooltip(Blocks.DEEPSLATE_BRICKS, "Deepslate cut into bricks with a pattern similar to that of stone bricks.");
+        addTooltip(Blocks.DEEPSLATE_BRICKS, "Deepslate cut into bricks with a pattern similar to stone's.");
         addTooltipForVariants(Blocks.DEEPSLATE_BRICKS, Blocks.DEEPSLATE_BRICK_SLAB, Blocks.DEEPSLATE_BRICK_STAIRS, Blocks.DEEPSLATE_BRICK_WALL);
         addTooltip(Blocks.CRACKED_DEEPSLATE_BRICKS, "Deepslate bricks cracked from age.", "Useful for decorative purposes.");
         addTooltip(Blocks.DEEPSLATE_TILES, "Tiled deepslate used for decorative purposes.");
         addTooltipForVariants(Blocks.DEEPSLATE_TILES, Blocks.DEEPSLATE_TILE_SLAB, Blocks.DEEPSLATE_TILE_STAIRS, Blocks.DEEPSLATE_TILE_WALL);
         addTooltip(Blocks.CRACKED_DEEPSLATE_TILES, "Deepslate tiles cracked from age.", "Useful for decorative purposes.");
-        addTooltip(Blocks.END_STONE_BRICKS, "End stone cut into bricks with a pattern similar to that of stone bricks.");
+        addTooltip(Blocks.END_STONE_BRICKS, "End stone cut into bricks with a pattern similar to stone's.");
         addTooltipForVariants(Blocks.END_STONE_BRICKS, Blocks.END_STONE_BRICK_SLAB, Blocks.END_STONE_BRICK_STAIRS, Blocks.END_STONE_BRICK_WALL);
         addTooltip(Blocks.MUD_BRICKS, "Packed mud shaped into bricks with a unique pattern.");
         addTooltipForVariants(Blocks.MUD_BRICKS, Blocks.MUD_BRICK_SLAB, Blocks.MUD_BRICK_STAIRS, Blocks.MUD_BRICK_WALL);
-        addTooltip(Blocks.NETHER_BRICKS, "Block of smelted netherrack bricks with a unique pattern.");
+        addTooltip(Blocks.NETHER_BRICKS, "A block of smelted netherrack bricks.", "Found in Nether Fortresses.");
         addTooltipForVariants(Blocks.NETHER_BRICKS, Blocks.NETHER_BRICK_SLAB, Blocks.NETHER_BRICK_STAIRS, Blocks.NETHER_BRICK_WALL, Blocks.NETHER_BRICK_FENCE);
         addTooltip(Blocks.CRACKED_NETHER_BRICKS, "Nether bricks cracked from age.", "Useful for decorative purposes.");
         addTooltip(Blocks.CHISELED_NETHER_BRICKS, "Nether bricks carved with a skull pattern.");
@@ -653,11 +652,11 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltipForVariants(Blocks.POLISHED_GRANITE, Blocks.POLISHED_GRANITE_SLAB, Blocks.POLISHED_GRANITE_STAIRS);
         addTooltip(Blocks.POLISHED_DEEPSLATE, "Compacted, smooth deepslate.", "Useful for decorative purposes.");
         addTooltipForVariants(Blocks.POLISHED_DEEPSLATE, Blocks.POLISHED_DEEPSLATE_SLAB, Blocks.POLISHED_DEEPSLATE_STAIRS, Blocks.POLISHED_DEEPSLATE_WALL);
-        addTooltip(Blocks.PRISMARINE, "A strange, color-changing stone found exclusively in Ocean Monuments and Ocean Ruins.");
+        addTooltip(Blocks.PRISMARINE, "A strange, color-changing stone.", "Found in the Overworld's oceans.");
         addTooltipForVariants(Blocks.PRISMARINE, Blocks.PRISMARINE_SLAB, Blocks.PRISMARINE_STAIRS, Blocks.PRISMARINE_WALL);
         addTooltip(Blocks.PRISMARINE_BRICKS, "Prismarine cut into bricks, only found in Ocean Monuments.");
         addTooltipForVariants(Blocks.PRISMARINE_BRICKS, Blocks.PRISMARINE_BRICK_SLAB, Blocks.PRISMARINE_BRICK_STAIRS);
-        addTooltip(Blocks.DARK_PRISMARINE, "Prismarine dyed with Squid Ink, found only in wall patterns of Ocean Monuments.");
+        addTooltip(Blocks.DARK_PRISMARINE, "Prismarine dyed with Squid Ink.", "Found only in wall patterns of Ocean Monuments.");
         addTooltipForVariants(Blocks.DARK_PRISMARINE, Blocks.DARK_PRISMARINE_SLAB, Blocks.DARK_PRISMARINE_STAIRS);
         addTooltip(Blocks.PURPUR_BLOCK, "A block found in End Cities made of popped chorus fruit.");
         addTooltipForVariants(Blocks.PURPUR_BLOCK, Blocks.PURPUR_SLAB, Blocks.PURPUR_STAIRS);
@@ -694,8 +693,8 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.JACK_O_LANTERN, "A carved pumpkin with a torch inside.", "Spooky!");
         addTooltip(Blocks.LANTERN, "A small light source that can hang from other blocks.");
         addTooltip(Blocks.SOUL_LANTERN, "A lantern that creates light by burning souls.");
-        addTooltip(Blocks.SEA_LANTERN, "A light source found in Ocean Monuments made using prismarine crystals.");
-        addTooltip(Blocks.TORCH, "A simple light source made of a stick and a piece of coal or charcoal.");
+        addTooltip(Blocks.SEA_LANTERN, "A light source found in Ocean Monuments.", "Made using prismarine crystals.");
+        addTooltip(Blocks.TORCH, "A simple light source.", "Crafted with a stick and coal.");
         addTooltip(Blocks.SOUL_TORCH, "A torch that creates light by burning souls.");
     }
     private void interactable() {
@@ -705,18 +704,18 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.DAMAGED_ANVIL, anvilTooltip);
         addTooltip(Blocks.BARREL, "A simple container used as a workstation by fishermen Villagers.");
         addTooltip(Blocks.BEACON, "A powerful, effect-granting block created using a Nether Star dropped by the Wither.");
-        addTooltip(Blocks.BREWING_STAND, "A piece of lab equipment used to brew potions and used as a workstation by cleric Villagers.");
+        addTooltip(Blocks.BREWING_STAND, "A piece of lab equipment used to brew potions.", "The workstation of cleric Villagers.");
         addTooltip(Blocks.BLAST_FURNACE, "A block used to smelt metals faster and as a workstation by armorer Villagers.");
         addTooltip(Blocks.CARTOGRAPHY_TABLE, "A block used to copy, lock and enlarge maps.", "Used as a workstation by cartographer Villagers.");
         addTooltip(Blocks.CHEST, "A wooden container commonly used to hold many items.", "Comes in two sizes.");
         addTooltip(Blocks.ENDER_CHEST, "An otherworldly container that can hold twenty-seven items that can be accessed from any Ender Chest.");
-        addTooltip(Blocks.CRAFTING_TABLE, "A simple workbench made from wooden planks.", "A fundamental block with hundreds of possibilities.");
-        addTooltip(Blocks.ENCHANTING_TABLE, "A magical workbench used for enchanting.", "Surrounding it with books increases its power and draws strange runes to its tome.");
+        addTooltip(Blocks.CRAFTING_TABLE, "A simple workbench made from wooden planks.", "Incredibly useful, with hundreds of recipes.");
+        addTooltip(Blocks.ENCHANTING_TABLE, "A magical workbench used for enchanting.", "Can be powered up by drawing on knowledge from bookshelves.");
         addTooltip(Blocks.FLETCHING_TABLE, "A workstation used by fletcher Villagers.");
-        addTooltip(Blocks.FURNACE, "A block used to smelt items in ten seconds.");
+        addTooltip(Blocks.FURNACE, "A handy block used to smelt items.");
         addTooltip(Blocks.GRINDSTONE, "A block used to remove enchantments from items.", "A workstation for weaponsmith Villagers.");
         addTooltip(Blocks.LECTERN, "A reading desk with a slanted top.", "Used as a workstation for librarian Villagers.");
-        addTooltip(Blocks.LOOM, "A block used to design banners and as a workstation for shepherd Villagers.");
+        addTooltip(Blocks.LOOM, "A block used to design banners.", "A workstation for shepherd Villagers.");
         var shulkerBoxTooltip = addTooltipText("A container made of a Shulker’s shell that keeps items inside when picked up.");
         addTooltip(Blocks.SHULKER_BOX, shulkerBoxTooltip);
         addTooltip(Blocks.WHITE_SHULKER_BOX, shulkerBoxTooltip);
@@ -736,7 +735,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.RED_SHULKER_BOX, shulkerBoxTooltip);
         addTooltip(Blocks.BLACK_SHULKER_BOX, shulkerBoxTooltip);
         addTooltip(Blocks.SMITHING_TABLE, "A workbench used to upgrade tools and armor.", "Used as a workstation by toolsmith Villagers.");
-        addTooltip(Blocks.SMOKER, "A block used to cook food faster and as a workstation by butcher Villagers.");
+        addTooltip(Blocks.SMOKER, "A block used to cook food faster.", "The workstation of choice for butcher Villagers.");
         addTooltip(Blocks.STONECUTTER, "A block used to cut and chisel many types of stone.", "Mason Villagers use it as a workstation.");
     }
     private void utilizable() {
@@ -775,7 +774,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.GREEN_BED, bedTooltip);
         addTooltip(Blocks.RED_BED, bedTooltip);
         addTooltip(Blocks.BLACK_BED, bedTooltip);
-        addTooltip(Blocks.BELL, "A block that can be rung to alert villagers.", "Additionally, it can be rung using redstone power or a projectile.");
+        addTooltip(Blocks.BELL, "A block that can be rung to alert villagers.", "Can be rung using redstone power or a projectile.");
         addTooltip(Blocks.CAKE, "A sweet food with cherries on top.", "Too big to eat all at once, but it comes in seven slices.");
         addTooltip(Blocks.CAMPFIRE, "An easy way to cook multiple pieces of food at once.", "Emits a plume of smoke that can be seen from far away.");
         addTooltip(Blocks.SOUL_CAMPFIRE, "A campfire that creates light by burning souls.");
@@ -788,12 +787,12 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.END_PORTAL_FRAME, "The indestructible frame of an End Portal.", "Only found in Strongholds.");
         addTooltip(Blocks.FLOWER_POT, "A small clay pot that can hold many types of plants.");
         addTooltip(Blocks.LADDER, "A useful wooden block that can be climbed up and down.");
-        addTooltip(Blocks.LODESTONE, "A chiseled stone block with a chunk of netherite in the center that can be used to guide a compass’ needle.");
+        addTooltip(Blocks.LODESTONE, "A chiseled stone block with a chunk of netherite in the center.", "It can be used to guide a compass’ needle.");
         addTooltip(Blocks.JUKEBOX, "A wooden block used to listen to music discs.");
         addTooltip(Blocks.NETHER_PORTAL, "A portal that brings you to and from the Nether.");
         addTooltip(Blocks.RESPAWN_ANCHOR, "A block charged with glowstone to set a respawn point in the Nether.", "Explosive when used in the Overworld.");
-        addTooltip(Blocks.SCAFFOLDING, "A very useful block made of bamboo used to get around while building.");
-        addTooltip(Blocks.SPAWNER, "A mysterious block that summons copies of any creature whose soul has become trapped inside.");
+        addTooltip(Blocks.SCAFFOLDING, "A useful block made of bamboo.", "Used to get around while building.");
+        addTooltip(Blocks.SPAWNER, "A mysterious block, found underground.", "Summons copies of creatures whose souls are trapped inside.");
         addTooltip(Blocks.TNT, "An explosive block made of sand and gunpowder.", "Be careful around anything you don’t want turned into a crater!");
     }
     private void mechanical() {
@@ -819,17 +818,17 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Blocks.REDSTONE_LAMP, "A light source turned on and off by redstone power.");
         addTooltip(Blocks.REPEATER, "A redstone component that can delay and extend redstone signals.");
         addTooltip(Blocks.REDSTONE_TORCH, "A torch that gives off a redstone power signal.");
-        addTooltip(Blocks.TARGET, "A block that gives off a redstone signal based on where it is hit with a projectile.");
+        addTooltip(Blocks.TARGET, "A block used for archery practice.", "Emits a redstone signal when struck.");
         addTooltip(Blocks.TRAPPED_CHEST, "A chest that activates a redstone signal when opened.");
         addTooltip(Blocks.TRIPWIRE_HOOK, "A hook that holds a tripwire and can activate a redstone signal.");
     }
     private void otherBlocks() {
         addTooltip(Blocks.BARRIER, "An invisible, unbreakable, solid block.");
-        addTooltip(Blocks.JIGSAW, "A mysterious and unobtainable block.", "It is rumored to have been involved in creating the world");
+        addTooltip(Blocks.JIGSAW, "A mysterious and unobtainable block.", "Rumored to have been involved in creating the world.");
         addTooltip(Blocks.STRUCTURE_BLOCK, "A mysterious block that has not been found to have any use.");
         addTooltip(Blocks.SCULK, "A block made from a material of unknown origin.", "Mining it seems to release the strange energy held within.");
         addTooltip(Blocks.SCULK_CATALYST, "A block made from a material of unknown origin.", "It can create more of this material when given sufficient soul power.");
-        addTooltip(Blocks.SCULK_SENSOR, "A block made from a material of unknown origin.", "Has small tendrils that can sense vibrations and put out a signal redstone can detect.");
+        addTooltip(Blocks.SCULK_SENSOR, "A block made from a material of unknown origin.", "Has small tendrils that can sense vibrations and emit a signal redstone can detect.");
         addTooltip(Blocks.SCULK_SHRIEKER, "A block made from a material of unknown origin.", "Its loud shrieks generate pulsating darkness.");
         addTooltip(Blocks.SCULK_VEIN, "A block made from a material of unknown origin.", "It seems to be an early stage of growth for other sculk blocks.");
     }
@@ -859,10 +858,10 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.MAGMA_CREAM, "A ball of a hot, slime-like substance dropped from Magma Cubes.");
         addTooltip(Items.NAUTILUS_SHELL, "The shell of a sea creature.", "Used to create a Conduit.");
         addTooltip(Items.QUARTZ, "A mineral found everywhere in the Nether.", "A piece of some redstone components.");
-        addTooltip(Items.NETHER_STAR, "Countless souls crystallized in a star shape.", "Dropped by a Wither and seems to have great magical potential.");
+        addTooltip(Items.NETHER_STAR, "Countless souls crystallized in a star shape.", "Seems to have great magical potential.");
         addTooltip(Items.NETHER_WART, "A fungus found in Nether Fortresses, commonly used to brew potions.");
         addTooltip(Items.PHANTOM_MEMBRANE, "A shred of the wing lining of a Phantom.", "Can be used to repair a broken elytra.");
-        addTooltip(Items.PRISMARINE_SHARD, "A piece of prismarine dropped by Guardians and Elder Guardians.");
+        addTooltip(Items.PRISMARINE_SHARD, "A small piece of prismarine.", "Dropped by all Guardians.");
         addTooltip(Items.PRISMARINE_CRYSTALS, "Glowing pieces of prismarine used to make sea lanterns.");
         addTooltip(Items.RABBIT_HIDE, "The coat of a rabbit.", "Can be crafted into leather.");
         addTooltip(Items.RABBIT_FOOT, "The paw of a rabbit, used as an ingredient in potions of leaping.");
@@ -891,7 +890,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.IRON_INGOT, "A bar of smelted iron.", "Very versatile in crafting.");
         addTooltip(Items.IRON_NUGGET, "A small piece of iron.");
         addTooltip(Items.NETHERITE_INGOT, "An alloy made of ancient scraps and gold.", "It has a strange property rendering it impervious to fire.");
-        addTooltip(Items.NETHERITE_SCRAP, "A small, smelted sheet of ancient debris.", "Perhaps once used as metal, but is surprisingly brittle in its current state.");
+        addTooltip(Items.NETHERITE_SCRAP, "A small, smelted sheet of ancient debris.", "Perhaps once used as metal, but brittle in its current state.");
         addTooltip(Items.PAPER, "A thin material made with sugar cane.", "Used to craft books.");
         addTooltip(Items.POPPED_CHORUS_FRUIT, "Smelted chorus fruit used to make some decorative blocks.");
         addTooltip(Items.SUGAR, "An ingredient for foods and potions, made from sugar cane.");
@@ -899,7 +898,7 @@ public class ETLanguageProvider extends LanguageProvider {
     private void food() {
         addTooltip(Items.APPLE, "A delicious, fresh fruit found on oak trees.");
         addTooltip(Items.GOLDEN_APPLE, "An apple coated in gold.", "Grants effects when eaten.");
-        addTooltip(Items.ENCHANTED_GOLDEN_APPLE, "A magical golden apple.", "Eating it will protect you from almost anything with multiple powerful effects.");
+        addTooltip(Items.ENCHANTED_GOLDEN_APPLE, "A magical golden apple.", "Protects you from almost anything with powerful effects.");
         addTooltip(Items.BEETROOT, "A red root vegetable found in villages.");
         addTooltip(Items.BEETROOT_SOUP, "A filling soup made with six beetroots.");
         addTooltip(Items.BREAD, "A very common food made with three pieces of wheat.");
@@ -1027,34 +1026,34 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.TRIDENT, "A three-pronged spear that easily travels through water.");
     }
     private void armor() {
-        addTooltip(Items.LEATHER_BOOTS, "A pair of boots made of leather.");
-        addTooltip(Items.CHAINMAIL_BOOTS, "A pair of boots made of chainmail.");
-        addTooltip(Items.IRON_BOOTS, "A pair of boots crafted of smelted iron.");
-        addTooltip(Items.GOLDEN_BOOTS, "A pair of boots crafted of smelted gold.");
-        addTooltip(Items.DIAMOND_BOOTS, "A pair of boots made of the Overworld’s strongest mineral.");
+        addTooltip(Items.LEATHER_BOOTS, "A pair of boots.", "Crafted with leather.");
+        addTooltip(Items.CHAINMAIL_BOOTS, "A pair of boots.", "Crafted with chainmail.");
+        addTooltip(Items.IRON_BOOTS, "A pair of boots.", "Crafted with smelted iron.");
+        addTooltip(Items.GOLDEN_BOOTS, "A pair of boots.", "Crafted with smelted gold.");
+        addTooltip(Items.DIAMOND_BOOTS, "A pair of boots.", "Crafted with of the Overworld’s strongest mineral.");
         addTooltip(Items.NETHERITE_BOOTS, "A pair of diamond boots enhanced with Netherite.", "This makes them impervious to fire.");
-        addTooltip(Items.LEATHER_CHESTPLATE, "A sturdy piece of armor made of leather.");
-        addTooltip(Items.CHAINMAIL_CHESTPLATE, "A sturdy piece of armor made of chainmail.");
-        addTooltip(Items.IRON_CHESTPLATE, "A sturdy piece of armor made of smelted iron.");
-        addTooltip(Items.GOLDEN_CHESTPLATE, "A sturdy piece of armor made of smelted gold.");
-        addTooltip(Items.DIAMOND_CHESTPLATE, "A sturdy piece of armor made of the Overworld’s strongest mineral.");
+        addTooltip(Items.LEATHER_CHESTPLATE, "A sturdy piece of armor.", "Crafted with  leather.");
+        addTooltip(Items.CHAINMAIL_CHESTPLATE, "A sturdy piece of armor.", "Crafted with  chainmail.");
+        addTooltip(Items.IRON_CHESTPLATE, "A sturdy piece of armor.", "Crafted with smelted iron.");
+        addTooltip(Items.GOLDEN_CHESTPLATE, "A sturdy piece of armor.", "Crafted with smelted gold.");
+        addTooltip(Items.DIAMOND_CHESTPLATE, "A sturdy piece of armor.", "Crafted with the Overworld’s strongest mineral.");
         addTooltip(Items.NETHERITE_CHESTPLATE, "A diamond chestplate enhanced with Netherite.", "This makes it impervious to fire.");
-        addTooltip(Items.LEATHER_HELMET, "A piece of head protection made of leather.");
-        addTooltip(Items.CHAINMAIL_HELMET, "A piece of head protection made of chainmail.");
-        addTooltip(Items.IRON_HELMET, "A piece of head protection made of smelted iron.");
-        addTooltip(Items.GOLDEN_HELMET, "A piece of head protection made of smelted gold.");
-        addTooltip(Items.DIAMOND_HELMET, "A piece of head protection made of the Overworld’s strongest mineral.");
+        addTooltip(Items.LEATHER_HELMET, "A piece of head protection.", "Crafted with leather.");
+        addTooltip(Items.CHAINMAIL_HELMET, "A piece of head protection.", "Crafted with chainmail.");
+        addTooltip(Items.IRON_HELMET, "A piece of head protection.", "Crafted with smelted iron.");
+        addTooltip(Items.GOLDEN_HELMET, "A piece of head protection.", "Crafted with smelted gold.");
+        addTooltip(Items.DIAMOND_HELMET, "A piece of head protection.", "Crafted with the Overworld’s strongest mineral.");
         addTooltip(Items.NETHERITE_HELMET, "A diamond helmet plated with Netherite.", "This makes it impervious to fire.");
         addTooltip(Items.TURTLE_HELMET, "A turtle’s shell, granting water breathing for ten seconds.");
         addTooltip(Items.LEATHER_HORSE_ARMOR, "Horse protection made of leather.");
         addTooltip(Items.IRON_HORSE_ARMOR, "Horse protection made of smelted iron.");
         addTooltip(Items.GOLDEN_HORSE_ARMOR, "Horse protection made of smelted gold.");
         addTooltip(Items.DIAMOND_HORSE_ARMOR, "Horse protection made of the Overworld’s strongest mineral.");
-        addTooltip(Items.LEATHER_LEGGINGS, "Leg protection made of leather.");
-        addTooltip(Items.CHAINMAIL_LEGGINGS, "Leg protection made of chainmail.");
-        addTooltip(Items.IRON_LEGGINGS, "Leg protection made of smelted iron.");
-        addTooltip(Items.GOLDEN_LEGGINGS, "Leg protection made of smelted gold.");
-        addTooltip(Items.DIAMOND_LEGGINGS, "Leg protection made of the Overworld’s strongest mineral.");
+        addTooltip(Items.LEATHER_LEGGINGS, "Leg protection.", "Crafted with leather.");
+        addTooltip(Items.CHAINMAIL_LEGGINGS, "Leg protection.", "Crafted with chainmail.");
+        addTooltip(Items.IRON_LEGGINGS, "Leg protection.", "Crafted with smelted iron.");
+        addTooltip(Items.GOLDEN_LEGGINGS, "Leg protection.", "Crafted with smelted gold.");
+        addTooltip(Items.DIAMOND_LEGGINGS, "Leg protection.", "Crafted with the Overworld’s strongest mineral.");
         addTooltip(Items.NETHERITE_LEGGINGS, "A pair of diamond leggings enhanced with Netherite.", "This makes them impervious to fire.");
     }
     private void transportation() {
@@ -1116,7 +1115,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.GOAT_HORN, "A goat’s horn that has fallen off.", "When blown, the sound can be heard for hundreds of meters.");
         addTooltip(Items.LEAD, "A leash used to keep creatures close.", "Can be tied to a fence post.");
         addTooltip(Items.SADDLE, "A useful seat for controlled riding of certain animals.");
-        addTooltip(Items.TOTEM_OF_UNDYING, "A strange figure created by illagers", "Mysteriously revives you when moments from death.");
+        addTooltip(Items.TOTEM_OF_UNDYING, "A strange figure created by illagers.", "Mysteriously revives you when moments from death.");
     }
     private void otherItems() {
         var discTooltip = addTooltipText("A disc made from an unknown material.", "It has etchings that allow music to be played.");
@@ -1137,7 +1136,7 @@ public class ETLanguageProvider extends LanguageProvider {
         addTooltip(Items.MUSIC_DISC_11, strangeDiscTooltip);
         addTooltip(Items.MUSIC_DISC_13, strangeDiscTooltip);
         addTooltip(Items.DISC_FRAGMENT_5, "A fragment of a music disc, found in an Ancient City.");
-        var spawnEggs = addTooltipText("A strange, multi-colored egg.", "When used, it hatches into a mob through an unknown process.");
+        var spawnEggs = addTooltipText("A strange, multi-colored egg.", "Hatches into a mob through an unknown process.");
         addTooltip(Items.ALLAY_SPAWN_EGG, spawnEggs);
         addTooltip(Items.AXOLOTL_SPAWN_EGG, spawnEggs);
         addTooltip(Items.BAT_SPAWN_EGG, spawnEggs);
